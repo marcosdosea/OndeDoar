@@ -1,14 +1,74 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Ariele Mendon\u00E7a\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\",
+  "WorkspaceRootPath": "C:\\Users\\Ariele Mendon\u00E7a\\Desktop\\Ariele_OndeDoar\\OndeDoar\\Codigo\\OndeDoar\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|c:\\users\\ariele mendon\u00E7a\\desktop\\ondedoar\\codigo\\ondedoar\\ondedoarweb\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|solutionrelative:ondedoarweb\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|c:\\users\\ariele mendon\u00E7a\\desktop\\ariele_ondedoar\\ondedoar\\codigo\\ondedoar\\ondedoarweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|solutionrelative:ondedoarweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5ED06CAD-956C-C94D-BC0C-E89E30A887C2}|Core\\Core.csproj|c:\\users\\ariele mendon\u00E7a\\desktop\\ondedoar\\codigo\\ondedoar\\core\\avaliacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|c:\\users\\ariele mendon\u00E7a\\desktop\\ariele_ondedoar\\ondedoar\\codigo\\ondedoar\\ondedoarweb\\controllers\\doadorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|solutionrelative:ondedoarweb\\controllers\\doadorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|c:\\users\\ariele mendon\u00E7a\\desktop\\ariele_ondedoar\\ondedoar\\codigo\\ondedoar\\ondedoarweb\\models\\doadormodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|solutionrelative:ondedoarweb\\models\\doadormodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ED06CAD-956C-C94D-BC0C-E89E30A887C2}|Core\\Core.csproj|c:\\users\\ariele mendon\u00E7a\\desktop\\ariele_ondedoar\\ondedoar\\codigo\\ondedoar\\core\\service\\idoadorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ED06CAD-956C-C94D-BC0C-E89E30A887C2}|Core\\Core.csproj|solutionrelative:core\\service\\idoadorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA958041-DDEF-48C0-BE1D-078961C95C4A}|Service\\Service.csproj|c:\\users\\ariele mendon\u00E7a\\desktop\\ariele_ondedoar\\ondedoar\\codigo\\ondedoar\\service\\doadorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA958041-DDEF-48C0-BE1D-078961C95C4A}|Service\\Service.csproj|solutionrelative:service\\doadorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|c:\\users\\ariele mendon\u00E7a\\desktop\\ariele_ondedoar\\ondedoar\\codigo\\ondedoar\\ondedoarweb\\mappers\\doadorprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|solutionrelative:ondedoarweb\\mappers\\doadorprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|c:\\users\\ariele mendon\u00E7a\\desktop\\ariele_ondedoar\\ondedoar\\codigo\\ondedoar\\ondedoarweb\\ondedoarweb.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|solutionrelative:ondedoarweb\\ondedoarweb.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ED06CAD-956C-C94D-BC0C-E89E30A887C2}|Core\\Core.csproj|c:\\users\\ariele mendon\u00E7a\\desktop\\ariele_ondedoar\\ondedoar\\codigo\\ondedoar\\core\\doador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ED06CAD-956C-C94D-BC0C-E89E30A887C2}|Core\\Core.csproj|solutionrelative:core\\doador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ED06CAD-956C-C94D-BC0C-E89E30A887C2}|Core\\Core.csproj|c:\\users\\ariele mendon\u00E7a\\desktop\\ariele_ondedoar\\ondedoar\\codigo\\ondedoar\\core\\dto\\doadordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ED06CAD-956C-C94D-BC0C-E89E30A887C2}|Core\\Core.csproj|solutionrelative:core\\dto\\doadordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ED06CAD-956C-C94D-BC0C-E89E30A887C2}|Core\\Core.csproj|c:\\users\\ariele mendon\u00E7a\\desktop\\ariele_ondedoar\\ondedoar\\codigo\\ondedoar\\core\\service\\serviceexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ED06CAD-956C-C94D-BC0C-E89E30A887C2}|Core\\Core.csproj|solutionrelative:core\\service\\serviceexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ED06CAD-956C-C94D-BC0C-E89E30A887C2}|Core\\Core.csproj|c:\\users\\ariele mendon\u00E7a\\desktop\\ariele_ondedoar\\ondedoar\\codigo\\ondedoar\\core\\postagem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ED06CAD-956C-C94D-BC0C-E89E30A887C2}|Core\\Core.csproj|solutionrelative:core\\postagem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ED06CAD-956C-C94D-BC0C-E89E30A887C2}|Core\\Core.csproj|c:\\users\\ariele mendon\u00E7a\\desktop\\ariele_ondedoar\\ondedoar\\codigo\\ondedoar\\core\\ondedoarcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ED06CAD-956C-C94D-BC0C-E89E30A887C2}|Core\\Core.csproj|solutionrelative:core\\ondedoarcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ED06CAD-956C-C94D-BC0C-E89E30A887C2}|Core\\Core.csproj|c:\\users\\ariele mendon\u00E7a\\desktop\\ariele_ondedoar\\ondedoar\\codigo\\ondedoar\\core\\notificacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ED06CAD-956C-C94D-BC0C-E89E30A887C2}|Core\\Core.csproj|solutionrelative:core\\notificacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ED06CAD-956C-C94D-BC0C-E89E30A887C2}|Core\\Core.csproj|c:\\users\\ariele mendon\u00E7a\\desktop\\ariele_ondedoar\\ondedoar\\codigo\\ondedoar\\core\\avaliacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5ED06CAD-956C-C94D-BC0C-E89E30A887C2}|Core\\Core.csproj|solutionrelative:core\\avaliacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ED06CAD-956C-C94D-BC0C-E89E30A887C2}|Core\\Core.csproj|c:\\users\\ariele mendon\u00E7a\\desktop\\ariele_ondedoar\\ondedoar\\codigo\\ondedoar\\core\\necessidade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ED06CAD-956C-C94D-BC0C-E89E30A887C2}|Core\\Core.csproj|solutionrelative:core\\necessidade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ED06CAD-956C-C94D-BC0C-E89E30A887C2}|Core\\Core.csproj|c:\\users\\ariele mendon\u00E7a\\desktop\\ariele_ondedoar\\ondedoar\\codigo\\ondedoar\\core\\instituicaodoador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ED06CAD-956C-C94D-BC0C-E89E30A887C2}|Core\\Core.csproj|solutionrelative:core\\instituicaodoador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|c:\\users\\ariele mendon\u00E7a\\desktop\\ariele_ondedoar\\ondedoar\\codigo\\ondedoar\\ondedoarweb\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|solutionrelative:ondedoarweb\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,21 +78,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Ariele Mendon\u00E7a\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\appsettings.json",
-              "RelativeDocumentMoniker": "OndeDoarWeb\\appsettings.json",
-              "ToolTip": "C:\\Users\\Ariele Mendon\u00E7a\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\appsettings.json",
-              "RelativeToolTip": "OndeDoarWeb\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-10-30T00:01:26.613Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -47,16 +94,212 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Avaliacao.cs",
-              "DocumentMoniker": "C:\\Users\\Ariele Mendon\u00E7a\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\Core\\Avaliacao.cs",
-              "RelativeDocumentMoniker": "Core\\Avaliacao.cs",
-              "ToolTip": "C:\\Users\\Ariele Mendon\u00E7a\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\Core\\Avaliacao.cs",
-              "RelativeToolTip": "Core\\Avaliacao.cs",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Ariele Mendon\u00E7a\\Desktop\\Ariele_OndeDoar\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\Program.cs",
+              "RelativeDocumentMoniker": "OndeDoarWeb\\Program.cs",
+              "ToolTip": "C:\\Users\\Ariele Mendon\u00E7a\\Desktop\\Ariele_OndeDoar\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\Program.cs",
+              "RelativeToolTip": "OndeDoarWeb\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-29T23:53:10.642Z",
+              "WhenOpened": "2026-10-31T00:43:25.942Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DoadorController.cs",
+              "DocumentMoniker": "C:\\Users\\Ariele Mendon\u00E7a\\Desktop\\Ariele_OndeDoar\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\Controllers\\DoadorController.cs",
+              "RelativeDocumentMoniker": "OndeDoarWeb\\Controllers\\DoadorController.cs",
+              "ToolTip": "C:\\Users\\Ariele Mendon\u00E7a\\Desktop\\Ariele_OndeDoar\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\Controllers\\DoadorController.cs",
+              "RelativeToolTip": "OndeDoarWeb\\Controllers\\DoadorController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFsAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-31T00:14:34.013Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DoadorProfile.cs",
+              "DocumentMoniker": "C:\\Users\\Ariele Mendon\u00E7a\\Desktop\\Ariele_OndeDoar\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\Mappers\\DoadorProfile.cs",
+              "RelativeDocumentMoniker": "OndeDoarWeb\\Mappers\\DoadorProfile.cs",
+              "ToolTip": "C:\\Users\\Ariele Mendon\u00E7a\\Desktop\\Ariele_OndeDoar\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\Mappers\\DoadorProfile.cs",
+              "RelativeToolTip": "OndeDoarWeb\\Mappers\\DoadorProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-31T00:04:10.329Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DoadorModel.cs",
+              "DocumentMoniker": "C:\\Users\\Ariele Mendon\u00E7a\\Desktop\\Ariele_OndeDoar\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\Models\\DoadorModel.cs",
+              "RelativeDocumentMoniker": "OndeDoarWeb\\Models\\DoadorModel.cs",
+              "ToolTip": "C:\\Users\\Ariele Mendon\u00E7a\\Desktop\\Ariele_OndeDoar\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\Models\\DoadorModel.cs",
+              "RelativeToolTip": "OndeDoarWeb\\Models\\DoadorModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-30T23:51:39.088Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Notificacao.cs",
+              "DocumentMoniker": "C:\\Users\\Ariele Mendon\u00E7a\\Desktop\\Ariele_OndeDoar\\OndeDoar\\Codigo\\OndeDoar\\Core\\Notificacao.cs",
+              "RelativeDocumentMoniker": "Core\\Notificacao.cs",
+              "ToolTip": "C:\\Users\\Ariele Mendon\u00E7a\\Desktop\\Ariele_OndeDoar\\OndeDoar\\Codigo\\OndeDoar\\Core\\Notificacao.cs",
+              "RelativeToolTip": "Core\\Notificacao.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-30T18:15:43.196Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DoadorService.cs",
+              "DocumentMoniker": "C:\\Users\\Ariele Mendon\u00E7a\\Desktop\\Ariele_OndeDoar\\OndeDoar\\Codigo\\OndeDoar\\Service\\DoadorService.cs",
+              "RelativeDocumentMoniker": "Service\\DoadorService.cs",
+              "ToolTip": "C:\\Users\\Ariele Mendon\u00E7a\\Desktop\\Ariele_OndeDoar\\OndeDoar\\Codigo\\OndeDoar\\Service\\DoadorService.cs",
+              "RelativeToolTip": "Service\\DoadorService.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAiwDYAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-30T18:06:24.667Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "OndeDoarContext.cs",
+              "DocumentMoniker": "C:\\Users\\Ariele Mendon\u00E7a\\Desktop\\Ariele_OndeDoar\\OndeDoar\\Codigo\\OndeDoar\\Core\\OndeDoarContext.cs",
+              "RelativeDocumentMoniker": "Core\\OndeDoarContext.cs",
+              "ToolTip": "C:\\Users\\Ariele Mendon\u00E7a\\Desktop\\Ariele_OndeDoar\\OndeDoar\\Codigo\\OndeDoar\\Core\\OndeDoarContext.cs",
+              "RelativeToolTip": "Core\\OndeDoarContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-30T18:15:52.211Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IDoadorService.cs",
+              "DocumentMoniker": "C:\\Users\\Ariele Mendon\u00E7a\\Desktop\\Ariele_OndeDoar\\OndeDoar\\Codigo\\OndeDoar\\Core\\Service\\IDoadorService.cs",
+              "RelativeDocumentMoniker": "Core\\Service\\IDoadorService.cs",
+              "ToolTip": "C:\\Users\\Ariele Mendon\u00E7a\\Desktop\\Ariele_OndeDoar\\OndeDoar\\Codigo\\OndeDoar\\Core\\Service\\IDoadorService.cs",
+              "RelativeToolTip": "Core\\Service\\IDoadorService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-30T17:56:36.015Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OndeDoarWeb.csproj",
+              "DocumentMoniker": "C:\\Users\\Ariele Mendon\u00E7a\\Desktop\\Ariele_OndeDoar\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\OndeDoarWeb.csproj",
+              "RelativeDocumentMoniker": "OndeDoarWeb\\OndeDoarWeb.csproj",
+              "ToolTip": "C:\\Users\\Ariele Mendon\u00E7a\\Desktop\\Ariele_OndeDoar\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\OndeDoarWeb.csproj",
+              "RelativeToolTip": "OndeDoarWeb\\OndeDoarWeb.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-10-31T00:10:21.921Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Postagem.cs",
+              "DocumentMoniker": "C:\\Users\\Ariele Mendon\u00E7a\\Desktop\\Ariele_OndeDoar\\OndeDoar\\Codigo\\OndeDoar\\Core\\Postagem.cs",
+              "RelativeDocumentMoniker": "Core\\Postagem.cs",
+              "ToolTip": "C:\\Users\\Ariele Mendon\u00E7a\\Desktop\\Ariele_OndeDoar\\OndeDoar\\Codigo\\OndeDoar\\Core\\Postagem.cs",
+              "RelativeToolTip": "Core\\Postagem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-30T18:15:59.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Necessidade.cs",
+              "DocumentMoniker": "C:\\Users\\Ariele Mendon\u00E7a\\Desktop\\Ariele_OndeDoar\\OndeDoar\\Codigo\\OndeDoar\\Core\\Necessidade.cs",
+              "RelativeDocumentMoniker": "Core\\Necessidade.cs",
+              "ToolTip": "C:\\Users\\Ariele Mendon\u00E7a\\Desktop\\Ariele_OndeDoar\\OndeDoar\\Codigo\\OndeDoar\\Core\\Necessidade.cs",
+              "RelativeToolTip": "Core\\Necessidade.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-30T18:14:39.604Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DoadorDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Ariele Mendon\u00E7a\\Desktop\\Ariele_OndeDoar\\OndeDoar\\Codigo\\OndeDoar\\Core\\DTO\\DoadorDTO.cs",
+              "RelativeDocumentMoniker": "Core\\DTO\\DoadorDTO.cs",
+              "ToolTip": "C:\\Users\\Ariele Mendon\u00E7a\\Desktop\\Ariele_OndeDoar\\OndeDoar\\Codigo\\OndeDoar\\Core\\DTO\\DoadorDTO.cs",
+              "RelativeToolTip": "Core\\DTO\\DoadorDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-30T17:50:43.586Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Doador.cs",
+              "DocumentMoniker": "C:\\Users\\Ariele Mendon\u00E7a\\Desktop\\Ariele_OndeDoar\\OndeDoar\\Codigo\\OndeDoar\\Core\\Doador.cs",
+              "RelativeDocumentMoniker": "Core\\Doador.cs",
+              "ToolTip": "C:\\Users\\Ariele Mendon\u00E7a\\Desktop\\Ariele_OndeDoar\\OndeDoar\\Codigo\\OndeDoar\\Core\\Doador.cs",
+              "RelativeToolTip": "Core\\Doador.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-30T17:50:09.15Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ServiceException.cs",
+              "DocumentMoniker": "C:\\Users\\Ariele Mendon\u00E7a\\Desktop\\Ariele_OndeDoar\\OndeDoar\\Codigo\\OndeDoar\\Core\\Service\\ServiceException.cs",
+              "RelativeDocumentMoniker": "Core\\Service\\ServiceException.cs",
+              "ToolTip": "C:\\Users\\Ariele Mendon\u00E7a\\Desktop\\Ariele_OndeDoar\\OndeDoar\\Codigo\\OndeDoar\\Core\\Service\\ServiceException.cs",
+              "RelativeToolTip": "Core\\Service\\ServiceException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-30T18:25:01.89Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Instituicaodoador.cs",
+              "DocumentMoniker": "C:\\Users\\Ariele Mendon\u00E7a\\Desktop\\Ariele_OndeDoar\\OndeDoar\\Codigo\\OndeDoar\\Core\\Instituicaodoador.cs",
+              "RelativeDocumentMoniker": "Core\\Instituicaodoador.cs",
+              "ToolTip": "C:\\Users\\Ariele Mendon\u00E7a\\Desktop\\Ariele_OndeDoar\\OndeDoar\\Codigo\\OndeDoar\\Core\\Instituicaodoador.cs",
+              "RelativeToolTip": "Core\\Instituicaodoador.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-30T18:14:28.881Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Avaliacao.cs",
+              "DocumentMoniker": "C:\\Users\\Ariele Mendon\u00E7a\\Desktop\\Ariele_OndeDoar\\OndeDoar\\Codigo\\OndeDoar\\Core\\Avaliacao.cs",
+              "RelativeDocumentMoniker": "Core\\Avaliacao.cs",
+              "ToolTip": "C:\\Users\\Ariele Mendon\u00E7a\\Desktop\\Ariele_OndeDoar\\OndeDoar\\Codigo\\OndeDoar\\Core\\Avaliacao.cs",
+              "RelativeToolTip": "Core\\Avaliacao.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-29T23:53:10.642Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Ariele Mendon\u00E7a\\Desktop\\Ariele_OndeDoar\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\appsettings.json",
+              "RelativeDocumentMoniker": "OndeDoarWeb\\appsettings.json",
+              "ToolTip": "C:\\Users\\Ariele Mendon\u00E7a\\Desktop\\Ariele_OndeDoar\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\appsettings.json",
+              "RelativeToolTip": "OndeDoarWeb\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-10-30T00:01:26.613Z"
             }
           ]
         }

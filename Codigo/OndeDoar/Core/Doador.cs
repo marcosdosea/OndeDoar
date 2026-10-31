@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace Core;
 
 public partial class Doador
 {
-    public uint Id { get; set; }
+    public int Id { get; set; }
 
     public string Email { get; set; } = null!;
 

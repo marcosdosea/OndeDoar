@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace Core;
 
 public partial class Postagem
 {
-    public uint Id { get; set; }
+    public int Id { get; set; }
 
     public string Titulo { get; set; } = null!;
 
@@ -13,5 +13,5 @@ public partial class Postagem
 
     public string Descricao { get; set; } = null!;
 
-    public uint InstituicaoId { get; set; }
+    public int InstituicaoId { get; set; }
 }

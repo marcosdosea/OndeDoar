@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OndeDoarWeb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d76507a40f74329f02e4c58b8b072bf613fe4f68")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+99b2b35ac627cc4e78f6618b4912688891a121ac")]
 [assembly: System.Reflection.AssemblyProductAttribute("OndeDoarWeb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OndeDoarWeb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

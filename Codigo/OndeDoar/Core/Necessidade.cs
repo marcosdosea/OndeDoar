@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace Core;
 
 public partial class Necessidade
 {
-    public uint Id { get; set; }
+    public int Id { get; set; }
 
     public string Nome { get; set; } = null!;
 
@@ -15,7 +15,7 @@ public partial class Necessidade
 
     public string Prioridade { get; set; } = null!;
 
-    public uint IdInstituicao { get; set; }
+    public int IdInstituicao { get; set; }
 
     public byte[]? Status { get; set; }
 }
