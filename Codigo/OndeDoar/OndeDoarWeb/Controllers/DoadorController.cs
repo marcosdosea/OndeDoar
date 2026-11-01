@@ -22,7 +22,7 @@ namespace OndeDoarWeb.Controllers
         // GET: DoadorController
         public ActionResult Index()
         {
-            var listarDoadores = _doadorService.ObterTodos;
+            var listarDoadores = _doadorService.ObterTodos();
             var listarDoadoresModel = _mapper.Map<List<DoadorModel>>(listarDoadores);
             return View(listarDoadoresModel);
         }
@@ -65,11 +65,11 @@ namespace OndeDoarWeb.Controllers
         // POST: DoadorController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(int id, DoadorModel doadorModel)
         {
            if (ModelState.IsValid)
             {
-                var doador = _mapper.Map<Doador>(collection);
+                var doador = _mapper.Map<Doador>(doadorModel);
                 _doadorService.Editar(doador);
             }
             return RedirectToAction(nameof(Index));

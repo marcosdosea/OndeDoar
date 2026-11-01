@@ -3,7 +3,7 @@ using Core.Service;
 
 namespace Service
 {
-    class DoadorService : IDoadorService
+    public class DoadorService : IDoadorService
     {
         private readonly OndeDoarContext _context;
         public DoadorService(OndeDoarContext context)
