@@ -1,5 +1,7 @@
 <Solution>
   <Project Path="Core/Core.csproj" />
   <Project Path="OndeDoarWeb/OndeDoarWeb.csproj" />
+  <Project Path="OndeDoarWebTests/OndeDoarWebTests.csproj" />
   <Project Path="Service/Service.csproj" Id="ca958041-ddef-48c0-be1d-078961c95c4a" />
+  <Project Path="ServiceTests/ServiceTests.csproj" />
 </Solution>
