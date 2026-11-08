@@ -1,0 +1,85 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoar\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5ED06CAD-956C-C94D-BC0C-E89E30A887C2}|Core\\Core.csproj|c:\\ulisses\\programas\\es2\\ondedoar\\codigo\\ondedoar\\ondedoar\\core\\ondedoarcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ED06CAD-956C-C94D-BC0C-E89E30A887C2}|Core\\Core.csproj|solutionrelative:core\\ondedoarcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|c:\\ulisses\\programas\\es2\\ondedoar\\codigo\\ondedoar\\ondedoar\\ondedoarweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|solutionrelative:ondedoarweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F7E9EC3-ADC5-485B-A9C5-A7FA1EF388AC}|ServiceTest\\ServiceTest.csproj|c:\\ulisses\\programas\\es2\\ondedoar\\codigo\\ondedoar\\ondedoar\\servicetest\\avaliacaoservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F7E9EC3-ADC5-485B-A9C5-A7FA1EF388AC}|ServiceTest\\ServiceTest.csproj|solutionrelative:servicetest\\avaliacaoservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F7E9EC3-ADC5-485B-A9C5-A7FA1EF388AC}|ServiceTest\\ServiceTest.csproj|c:\\ulisses\\programas\\es2\\ondedoar\\codigo\\ondedoar\\ondedoar\\servicetest\\servicetest.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{6F7E9EC3-ADC5-485B-A9C5-A7FA1EF388AC}|ServiceTest\\ServiceTest.csproj|solutionrelative:servicetest\\servicetest.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OndeDoarContext.cs",
+              "DocumentMoniker": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoar\\Core\\OndeDoarContext.cs",
+              "RelativeDocumentMoniker": "Core\\OndeDoarContext.cs",
+              "ToolTip": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoar\\Core\\OndeDoarContext.cs",
+              "RelativeToolTip": "Core\\OndeDoarContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-08T22:56:18.982Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AvaliacaoServiceTests.cs",
+              "DocumentMoniker": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoar\\ServiceTest\\AvaliacaoServiceTests.cs",
+              "RelativeDocumentMoniker": "ServiceTest\\AvaliacaoServiceTests.cs",
+              "ToolTip": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoar\\ServiceTest\\AvaliacaoServiceTests.cs",
+              "RelativeToolTip": "ServiceTest\\AvaliacaoServiceTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-08T22:46:16.315Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ServiceTest.csproj",
+              "DocumentMoniker": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoar\\ServiceTest\\ServiceTest.csproj",
+              "RelativeDocumentMoniker": "ServiceTest\\ServiceTest.csproj",
+              "ToolTip": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoar\\ServiceTest\\ServiceTest.csproj",
+              "RelativeToolTip": "ServiceTest\\ServiceTest.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-11-08T22:46:14.668Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoar\\OndeDoarWeb\\Program.cs",
+              "RelativeDocumentMoniker": "OndeDoarWeb\\Program.cs",
+              "ToolTip": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoar\\OndeDoarWeb\\Program.cs",
+              "RelativeToolTip": "OndeDoarWeb\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-08T22:42:13.25Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
