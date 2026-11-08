@@ -5,7 +5,7 @@ namespace Core;
 
 public partial class Postagem
 {
-    public int Id { get; set; }
+    public uint Id { get; set; }
 
     public string Titulo { get; set; } = null!;
 
