@@ -3,28 +3,40 @@
   "WorkspaceRootPath": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1A2E62CC-7358-41DB-81ED-196EB9904DBA}|OndeDoarWebTest\\OndeDoarWebTest.csproj|c:\\ulisses\\programas\\es2\\ondedoar\\codigo\\ondedoar\\ondedoarwebtest\\controllers\\avaliacaocontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A2E62CC-7358-41DB-81ED-196EB9904DBA}|OndeDoarWebTest\\OndeDoarWebTest.csproj|solutionrelative:ondedoarwebtest\\controllers\\avaliacaocontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|c:\\ulisses\\programas\\es2\\ondedoar\\codigo\\ondedoar\\ondedoarweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|solutionrelative:ondedoarweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|c:\\ulisses\\programas\\es2\\ondedoar\\codigo\\ondedoar\\ondedoarweb\\models\\avaliacaoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|solutionrelative:ondedoarweb\\models\\avaliacaoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CA958041-DDEF-48C0-BE1D-078961C95C4A}|Service\\Service.csproj|c:\\ulisses\\programas\\es2\\ondedoar\\codigo\\ondedoar\\service\\avaliacaoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA958041-DDEF-48C0-BE1D-078961C95C4A}|Service\\Service.csproj|solutionrelative:service\\avaliacaoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|c:\\ulisses\\programas\\es2\\ondedoar\\codigo\\ondedoar\\ondedoarweb\\mappers\\avaliacaomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|solutionrelative:ondedoarweb\\mappers\\avaliacaomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5ED06CAD-956C-C94D-BC0C-E89E30A887C2}|Core\\Core.csproj|c:\\ulisses\\programas\\es2\\ondedoar\\codigo\\ondedoar\\core\\avaliacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ED06CAD-956C-C94D-BC0C-E89E30A887C2}|Core\\Core.csproj|solutionrelative:core\\avaliacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|c:\\ulisses\\programas\\es2\\ondedoar\\codigo\\ondedoar\\ondedoarweb\\controllers\\avaliacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|solutionrelative:ondedoarweb\\controllers\\avaliacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5ED06CAD-956C-C94D-BC0C-E89E30A887C2}|Core\\Core.csproj|c:\\ulisses\\programas\\es2\\ondedoar\\codigo\\ondedoar\\core\\dto\\doadordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ED06CAD-956C-C94D-BC0C-E89E30A887C2}|Core\\Core.csproj|solutionrelative:core\\dto\\doadordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A2E62CC-7358-41DB-81ED-196EB9904DBA}|OndeDoarWebTest\\OndeDoarWebTest.csproj|c:\\ulisses\\programas\\es2\\ondedoar\\codigo\\ondedoar\\ondedoarwebtest\\ondedoarwebtest.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{1A2E62CC-7358-41DB-81ED-196EB9904DBA}|OndeDoarWebTest\\OndeDoarWebTest.csproj|solutionrelative:ondedoarwebtest\\ondedoarwebtest.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|c:\\ulisses\\programas\\es2\\ondedoar\\codigo\\ondedoar\\ondedoarweb\\views\\avaliacao\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|solutionrelative:ondedoarweb\\views\\avaliacao\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|c:\\ulisses\\programas\\es2\\ondedoar\\codigo\\ondedoar\\ondedoarweb\\mappers\\doadorprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|solutionrelative:ondedoarweb\\mappers\\doadorprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|c:\\ulisses\\programas\\es2\\ondedoar\\codigo\\ondedoar\\ondedoarweb\\views\\avaliacao\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|solutionrelative:ondedoarweb\\views\\avaliacao\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|c:\\ulisses\\programas\\es2\\ondedoar\\codigo\\ondedoar\\ondedoarweb\\views\\avaliacao\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|solutionrelative:ondedoarweb\\views\\avaliacao\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|c:\\ulisses\\programas\\es2\\ondedoar\\codigo\\ondedoar\\ondedoarweb\\views\\avaliacao\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|solutionrelative:ondedoarweb\\views\\avaliacao\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|c:\\ulisses\\programas\\es2\\ondedoar\\codigo\\ondedoar\\ondedoarweb\\views\\avaliacao\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|solutionrelative:ondedoarweb\\views\\avaliacao\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,84 +46,123 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AvaliacaoViewModel.cs",
-              "DocumentMoniker": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\Models\\AvaliacaoViewModel.cs",
-              "RelativeDocumentMoniker": "OndeDoarWeb\\Models\\AvaliacaoViewModel.cs",
-              "ToolTip": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\Models\\AvaliacaoViewModel.cs",
-              "RelativeToolTip": "OndeDoarWeb\\Models\\AvaliacaoViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAABAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\Program.cs",
+              "RelativeDocumentMoniker": "OndeDoarWeb\\Program.cs",
+              "ToolTip": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\Program.cs",
+              "RelativeToolTip": "OndeDoarWeb\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-09T17:13:53.88Z",
+              "WhenOpened": "2026-11-09T19:26:46.949Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AvaliacaoControllerTests.cs",
-              "DocumentMoniker": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWebTest\\Controllers\\AvaliacaoControllerTests.cs",
-              "RelativeDocumentMoniker": "OndeDoarWebTest\\Controllers\\AvaliacaoControllerTests.cs",
-              "ToolTip": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWebTest\\Controllers\\AvaliacaoControllerTests.cs",
-              "RelativeToolTip": "OndeDoarWebTest\\Controllers\\AvaliacaoControllerTests.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAcwAUAAAAZAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "AvaliacaoService.cs",
+              "DocumentMoniker": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\Service\\AvaliacaoService.cs",
+              "RelativeDocumentMoniker": "Service\\AvaliacaoService.cs",
+              "ToolTip": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\Service\\AvaliacaoService.cs",
+              "RelativeToolTip": "Service\\AvaliacaoService.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAABgAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-09T17:33:00.66Z",
+              "WhenOpened": "2026-11-09T19:03:12.44Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AvaliacaoMapper.cs",
-              "DocumentMoniker": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\Mappers\\AvaliacaoMapper.cs",
-              "RelativeDocumentMoniker": "OndeDoarWeb\\Mappers\\AvaliacaoMapper.cs",
-              "ToolTip": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\Mappers\\AvaliacaoMapper.cs",
-              "RelativeToolTip": "OndeDoarWeb\\Mappers\\AvaliacaoMapper.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAIAAAAZAAAAAAAAAA==",
+              "Title": "Avaliacao.cs",
+              "DocumentMoniker": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\Core\\Avaliacao.cs",
+              "RelativeDocumentMoniker": "Core\\Avaliacao.cs",
+              "ToolTip": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\Core\\Avaliacao.cs",
+              "RelativeToolTip": "Core\\Avaliacao.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-09T17:18:05.918Z",
+              "WhenOpened": "2026-11-09T19:24:58.661Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "AvaliacaoController.cs",
-              "DocumentMoniker": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\Controllers\\AvaliacaoController.cs",
-              "RelativeDocumentMoniker": "OndeDoarWeb\\Controllers\\AvaliacaoController.cs",
-              "ToolTip": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\Controllers\\AvaliacaoController.cs",
-              "RelativeToolTip": "OndeDoarWeb\\Controllers\\AvaliacaoController.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAAAAMAAAAZAAAAAAAAAA==",
+              "Title": "DoadorDTO.cs",
+              "DocumentMoniker": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\Core\\DTO\\DoadorDTO.cs",
+              "RelativeDocumentMoniker": "Core\\DTO\\DoadorDTO.cs",
+              "ToolTip": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\Core\\DTO\\DoadorDTO.cs",
+              "RelativeToolTip": "Core\\DTO\\DoadorDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-09T17:19:05.015Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "OndeDoarWebTest",
-              "DocumentMoniker": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWebTest\\OndeDoarWebTest.csproj",
-              "RelativeDocumentMoniker": "OndeDoarWebTest\\OndeDoarWebTest.csproj",
-              "ToolTip": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWebTest\\OndeDoarWebTest.csproj",
-              "RelativeToolTip": "OndeDoarWebTest\\OndeDoarWebTest.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-11-09T17:35:24.188Z",
+              "WhenOpened": "2026-11-09T19:20:26.262Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "DoadorProfile.cs",
-              "DocumentMoniker": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\Mappers\\DoadorProfile.cs",
-              "RelativeDocumentMoniker": "OndeDoarWeb\\Mappers\\DoadorProfile.cs",
-              "ToolTip": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\Mappers\\DoadorProfile.cs",
-              "RelativeToolTip": "OndeDoarWeb\\Mappers\\DoadorProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-09T17:18:08.895Z",
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\Views\\Avaliacao\\Delete.cshtml",
+              "RelativeDocumentMoniker": "OndeDoarWeb\\Views\\Avaliacao\\Delete.cshtml",
+              "ToolTip": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\Views\\Avaliacao\\Delete.cshtml",
+              "RelativeToolTip": "OndeDoarWeb\\Views\\Avaliacao\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-09T18:59:00.391Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\Views\\Avaliacao\\Details.cshtml",
+              "RelativeDocumentMoniker": "OndeDoarWeb\\Views\\Avaliacao\\Details.cshtml",
+              "ToolTip": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\Views\\Avaliacao\\Details.cshtml",
+              "RelativeToolTip": "OndeDoarWeb\\Views\\Avaliacao\\Details.cshtml",
+              "ViewState": "AgIAABQAAAAAAAAAAAAswC8AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-09T18:58:42.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\Views\\Avaliacao\\Edit.cshtml",
+              "RelativeDocumentMoniker": "OndeDoarWeb\\Views\\Avaliacao\\Edit.cshtml",
+              "ToolTip": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\Views\\Avaliacao\\Edit.cshtml",
+              "RelativeToolTip": "OndeDoarWeb\\Views\\Avaliacao\\Edit.cshtml",
+              "ViewState": "AgIAACAAAAAAAAAAAAAswD0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-09T18:58:07.742Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\Views\\Avaliacao\\Create.cshtml",
+              "RelativeDocumentMoniker": "OndeDoarWeb\\Views\\Avaliacao\\Create.cshtml",
+              "ToolTip": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\Views\\Avaliacao\\Create.cshtml",
+              "RelativeToolTip": "OndeDoarWeb\\Views\\Avaliacao\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-09T18:57:11.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\Views\\Avaliacao\\Index.cshtml",
+              "RelativeDocumentMoniker": "OndeDoarWeb\\Views\\Avaliacao\\Index.cshtml",
+              "ToolTip": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\Views\\Avaliacao\\Index.cshtml",
+              "RelativeToolTip": "OndeDoarWeb\\Views\\Avaliacao\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-09T18:56:32.246Z",
               "EditorCaption": ""
             }
           ]
