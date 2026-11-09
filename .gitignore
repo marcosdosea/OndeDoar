@@ -1,3 +1,8 @@
+# Arquivos gerados pelo Visual Studio
+bin/
+obj/
+
+.vs/
 /Codigo/OndeDoar/Core/obj
 /Codigo/OndeDoar/Core/bin
 /Codigo/OndeDoar/Service/obj
