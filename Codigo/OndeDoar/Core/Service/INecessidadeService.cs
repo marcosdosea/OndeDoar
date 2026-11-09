@@ -2,10 +2,11 @@
 {
     public interface INecessidadeService
     {
-        void Editar(Necessidade necessidade);
-        int Inserir(Necessidade necessidade);
-        Necessidade Obter(int id);
-        IEnumerable<Necessidade> ObterTodos();
-        void Remover(int id);
+        int Create(Necessidade necessidade);
+        void Edit(Necessidade necessidade);
+        void Delete(int id);
+        Necessidade? Get(int id);
+        IEnumerable<Necessidade> GetAll();
+        bool Validar(Necessidade necessidade);
     }
 }
