@@ -2,8 +2,6 @@ using Core;
 using Core.Service;
 using Microsoft.EntityFrameworkCore;
 using Service;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace DoadorWeb
 {
@@ -17,6 +15,7 @@ namespace DoadorWeb
             builder.Services.AddControllersWithViews();
 
             builder.Services.AddTransient<IDoadorService, DoadorService>();
+            builder.Services.AddTransient<IAvaliacaoService, AvaliacaoService>();
 
             builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
