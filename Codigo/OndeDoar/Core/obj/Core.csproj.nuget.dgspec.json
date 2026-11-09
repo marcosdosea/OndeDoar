@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj": {}
+    "C:\\Users\\felip\\Área de Trabalho\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj": {}
   },
   "projects": {
-    "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj": {
+    "C:\\Users\\felip\\Área de Trabalho\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\Users\\felip\\Área de Trabalho\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj",
-        "packagesPath": "C:\\Users\\jpuli\\.nuget\\packages\\",
-        "outputPath": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\Core\\obj\\",
+        "projectPath": "C:\\Users\\felip\\Área de Trabalho\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj",
+        "packagesPath": "C:\\Users\\felip\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\felip\\Área de Trabalho\\OndeDoar\\Codigo\\OndeDoar\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\jpuli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\felip\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
