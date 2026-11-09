@@ -16,6 +16,7 @@ namespace DoadorWeb
 
             builder.Services.AddTransient<IDoadorService, DoadorService>();
             builder.Services.AddTransient<IAvaliacaoService, AvaliacaoService>();
+            builder.Services.AddTransient<INecessidadeService, NecessidadeService>();
 
             builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
