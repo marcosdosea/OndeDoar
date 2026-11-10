@@ -1,4 +1,3 @@
-using AutoMapper;
 using Core;
 using Core.Service;
 using Microsoft.AspNetCore.Http;
@@ -14,14 +13,12 @@ namespace OndeDoarWebTests.Controllers
     public class DoadorControllerTests
     {
         private Mock<IDoadorService> mockService;
-        private Mock<IMapper> mockMapper;
         private DoadorController controller;
 
         [TestInitialize]
         public void Initialize()
         {
             mockService = new Mock<IDoadorService>();
-            mockMapper = new Mock<IMapper>();
 
             mockService.Setup(service => service.ObterTodos())
                 .Returns(GetTestDoadores());
@@ -36,18 +33,13 @@ namespace OndeDoarWebTests.Controllers
             mockService.Setup(service => service.Remover(1));
 
             controller = new DoadorController(
-                mockService.Object,
-                mockMapper.Object
+                mockService.Object
             );
         }
 
         [TestMethod]
         public void IndexTest()
         {
-            mockMapper.Setup(mapper =>
-                mapper.Map<List<DoadorModel>>(It.IsAny<List<Doador>>()))
-                .Returns(GetTestDoadoresModel());
-
             var result = controller.Index() as ViewResult;
 
             Assert.IsNotNull(result);
@@ -57,10 +49,6 @@ namespace OndeDoarWebTests.Controllers
         [TestMethod]
         public void DetailsTest()
         {
-            mockMapper.Setup(mapper =>
-                mapper.Map<DoadorModel>(It.IsAny<Doador>()))
-                .Returns(GetTestDoadorModel());
-
             var result = controller.Details(1) as ViewResult;
 
             Assert.IsNotNull(result);
@@ -79,10 +67,6 @@ namespace OndeDoarWebTests.Controllers
         public void CreateTest_Valid()
         {
             var doadorModel = GetTestDoadorModel();
-
-            mockMapper.Setup(mapper =>
-                mapper.Map<Doador>(It.IsAny<DoadorModel>()))
-                .Returns(GetTestDoador());
 
             var result = controller.InserirDoador(doadorModel) as RedirectToActionResult;
 
@@ -112,10 +96,6 @@ namespace OndeDoarWebTests.Controllers
         [TestMethod]
         public void EditTest_Get_Valid()
         {
-            mockMapper.Setup(mapper =>
-                mapper.Map<DoadorModel>(It.IsAny<Doador>()))
-                .Returns(GetTestDoadorModel());
-
             var result = controller.AlterarDoador(1) as ViewResult;
 
             Assert.IsNotNull(result);
@@ -126,10 +106,6 @@ namespace OndeDoarWebTests.Controllers
         public void EditTest_Post_Valid()
         {
             var doadorModel = GetTestDoadorModel();
-
-            mockMapper.Setup(mapper =>
-                mapper.Map<Doador>(It.IsAny<DoadorModel>()))
-                .Returns(GetTestDoador());
 
             var result = controller.AlterarDoador(1, doadorModel) as RedirectToActionResult;
 
@@ -159,10 +135,6 @@ namespace OndeDoarWebTests.Controllers
         [TestMethod]
         public void DeleteTest_Get_Valid()
         {
-            mockMapper.Setup(mapper =>
-                mapper.Map<DoadorModel>(It.IsAny<Doador>()))
-                .Returns(GetTestDoadorModel());
-
             var result = controller.RemoverDoador(1) as ViewResult;
 
             Assert.IsNotNull(result);
@@ -212,14 +184,6 @@ namespace OndeDoarWebTests.Controllers
             return new List<Doador>
             {
                 GetTestDoador()
-            };
-        }
-
-        private List<DoadorModel> GetTestDoadoresModel()
-        {
-            return new List<DoadorModel>
-            {
-                GetTestDoadorModel()
             };
         }
     }

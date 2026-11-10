@@ -22,7 +22,6 @@ namespace DoadorWeb
 
             builder.Services.AddTransient<IPostagemService, PostagemService>();
             builder.Services.AddTransient<INotificacaoService, NotificacaoService>();
-            builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             builder.Services.AddDbContext<OndeDoarContext>(
             options => options.UseMySQL(builder.Configuration.GetConnectionString("OndeDoarConnection")));

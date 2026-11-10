@@ -1,6 +1,6 @@
-using AutoMapper;
 using Core;
 using Core.Service;
+using Mapster;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Models;
@@ -10,12 +10,10 @@ namespace OndeDoarWeb.Controllers
     public class DoadorController : Controller
     {
         IDoadorService _doadorService;
-        IMapper _mapper;
 
-        public DoadorController(IDoadorService doadorService, IMapper mapper)
+        public DoadorController(IDoadorService doadorService)
         {
             _doadorService = doadorService;
-            _mapper = mapper;
         }
 
 
@@ -23,7 +21,7 @@ namespace OndeDoarWeb.Controllers
         public ActionResult Index()
         {
             var listarDoadores = _doadorService.ObterTodos();
-            var listarDoadoresModel = _mapper.Map<List<DoadorModel>>(listarDoadores);
+            var listarDoadoresModel = listarDoadores.Adapt<List<DoadorModel>>();
             return View(listarDoadoresModel);
         }
 
@@ -31,7 +29,7 @@ namespace OndeDoarWeb.Controllers
         public ActionResult Details(int id)
         {
             Doador doador = _doadorService.Obter(id);
-            DoadorModel doadorModel = _mapper.Map<DoadorModel>(doador);
+            DoadorModel doadorModel = doador.Adapt<DoadorModel>();
             return View(doadorModel);
         }
 
@@ -48,7 +46,7 @@ namespace OndeDoarWeb.Controllers
         {
             if (ModelState.IsValid)
             {
-                var doador = _mapper.Map<Doador>(doadorModel);
+                var doador = doadorModel.Adapt<Doador>();
                 _doadorService.Inserir(doador);
             }
             return RedirectToAction(nameof(Index));
@@ -58,7 +56,7 @@ namespace OndeDoarWeb.Controllers
         public ActionResult AlterarDoador(int id)
         {
             Doador doador = _doadorService.Obter(id);
-            DoadorModel doadorModel = _mapper.Map<DoadorModel>(doador);
+            DoadorModel doadorModel = doador.Adapt<DoadorModel>();
             return View(doadorModel);
         }
 
@@ -69,7 +67,7 @@ namespace OndeDoarWeb.Controllers
         {
            if (ModelState.IsValid)
             {
-                var doador = _mapper.Map<Doador>(doadorModel);
+                var doador = doadorModel.Adapt<Doador>();
                 _doadorService.Editar(doador);
             }
             return RedirectToAction(nameof(Index));
@@ -79,7 +77,7 @@ namespace OndeDoarWeb.Controllers
         public ActionResult RemoverDoador(int id)
         {
             Doador doador = _doadorService.Obter(id);
-            DoadorModel doadorModel = _mapper.Map<DoadorModel>(doador);
+            DoadorModel doadorModel = doador.Adapt<DoadorModel>();
             return View(doadorModel);
         }
 
