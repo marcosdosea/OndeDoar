@@ -19,6 +19,8 @@ public partial class OndeDoarContext : DbContext
 
     public virtual DbSet<Doador> Doadors { get; set; }
 
+    public virtual DbSet<Instituicao> Instituicaos { get; set; }
+
     public virtual DbSet<Instituicaodoador> Instituicaodoadors { get; set; }
 
     public virtual DbSet<Necessidade> Necessidades { get; set; }
@@ -27,8 +29,54 @@ public partial class OndeDoarContext : DbContext
 
     public virtual DbSet<Postagem> Postagems { get; set; }
 
+
+
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<Instituicao>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PRIMARY");
+
+            entity.ToTable("instituicao");
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.Cep)
+                .HasMaxLength(9)
+                .IsFixedLength()
+                .HasColumnName("cep");
+            entity.Property(e => e.Cidade)
+                .HasMaxLength(40)
+                .HasColumnName("cidade");
+            entity.Property(e => e.Cnpj)
+                .HasMaxLength(14)
+                .IsFixedLength()
+                .HasColumnName("cnpj");
+            entity.Property(e => e.Email)
+                .HasMaxLength(40)
+                .HasColumnName("email");
+            entity.Property(e => e.Estado)
+                .HasMaxLength(2)
+                .IsFixedLength()
+                .HasColumnName("estado");
+            entity.Property(e => e.HoraAbertura)
+                .HasColumnType("time")
+                .HasColumnName("horaAbertura");
+            entity.Property(e => e.HoraFechamento)
+                .HasColumnType("time")
+                .HasColumnName("horaFechamento");
+            entity.Property(e => e.NomeFantasia)
+                .HasMaxLength(50)
+                .HasColumnName("nomeFantasia");
+            entity.Property(e => e.RazaoSocial)
+                .HasMaxLength(40)
+                .HasColumnName("razaoSocial");
+            entity.Property(e => e.Telefone)
+                .HasMaxLength(11)
+                .IsFixedLength()
+                .HasColumnName("telefone");
+        });
+
         modelBuilder.Entity<Avaliacao>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PRIMARY");

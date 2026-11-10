@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWebTest\\OndeDoarWebTest.csproj": {}
+    "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWebTest\\OndeDoarWebTest.csproj": {}
   },
   "projects": {
-    "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj": {
+    "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj",
-        "packagesPath": "C:\\Users\\jpuli\\.nuget\\packages\\",
-        "outputPath": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\Core\\obj\\",
+        "projectPath": "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj",
+        "packagesPath": "C:\\Users\\david\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\jpuli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\david\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -363,20 +364,20 @@
         }
       }
     },
-    "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWebTest\\OndeDoarWebTest.csproj": {
+    "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWebTest\\OndeDoarWebTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWebTest\\OndeDoarWebTest.csproj",
+        "projectUniqueName": "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWebTest\\OndeDoarWebTest.csproj",
         "projectName": "OndeDoarWebTest",
-        "projectPath": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWebTest\\OndeDoarWebTest.csproj",
-        "packagesPath": "C:\\Users\\jpuli\\.nuget\\packages\\",
-        "outputPath": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWebTest\\obj\\",
+        "projectPath": "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWebTest\\OndeDoarWebTest.csproj",
+        "packagesPath": "C:\\Users\\david\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWebTest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\jpuli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\david\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -385,6 +386,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -392,14 +394,14 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj": {
-                "projectPath": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj"
+              "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj"
               },
-              "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\OndeDoarWeb.csproj": {
-                "projectPath": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\OndeDoarWeb.csproj"
+              "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\OndeDoarWeb.csproj": {
+                "projectPath": "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\OndeDoarWeb.csproj"
               },
-              "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\Service\\Service.csproj": {
-                "projectPath": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\Service\\Service.csproj"
+              "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\Service\\Service.csproj": {
+                "projectPath": "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\Service\\Service.csproj"
               }
             }
           }
@@ -724,20 +726,20 @@
         }
       }
     },
-    "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\OndeDoarWeb.csproj": {
+    "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\OndeDoarWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\OndeDoarWeb.csproj",
+        "projectUniqueName": "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\OndeDoarWeb.csproj",
         "projectName": "OndeDoarWeb",
-        "projectPath": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\OndeDoarWeb.csproj",
-        "packagesPath": "C:\\Users\\jpuli\\.nuget\\packages\\",
-        "outputPath": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\obj\\",
+        "projectPath": "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\OndeDoarWeb.csproj",
+        "packagesPath": "C:\\Users\\david\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\jpuli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\david\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -746,6 +748,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -753,11 +756,11 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj": {
-                "projectPath": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj"
+              "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj"
               },
-              "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\Service\\Service.csproj": {
-                "projectPath": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\Service\\Service.csproj"
+              "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\Service\\Service.csproj": {
+                "projectPath": "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\Service\\Service.csproj"
               }
             }
           }
@@ -1249,20 +1252,20 @@
         }
       }
     },
-    "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\Service\\Service.csproj": {
+    "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\Service\\Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\Service\\Service.csproj",
+        "projectUniqueName": "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\Service\\Service.csproj",
         "projectName": "Service",
-        "projectPath": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\Service\\Service.csproj",
-        "packagesPath": "C:\\Users\\jpuli\\.nuget\\packages\\",
-        "outputPath": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\Service\\obj\\",
+        "projectPath": "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\Service\\Service.csproj",
+        "packagesPath": "C:\\Users\\david\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\jpuli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\david\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -1271,6 +1274,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -1278,8 +1282,8 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj": {
-                "projectPath": "C:\\Ulisses\\programas\\ES2\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj"
+              "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj"
               }
             }
           }
