@@ -2,7 +2,7 @@
 
 namespace Models
 {
-    public class NecessidadeModel
+    public class NecessidadeViewModel
     {
         [Display(Name = "Código")]
         public int Id { get; set; }

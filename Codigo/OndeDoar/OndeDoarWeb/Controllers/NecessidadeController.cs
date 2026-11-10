@@ -1,6 +1,6 @@
-﻿using AutoMapper;
-using Core;
+﻿using Core;
 using Core.Service;
+using Mappers;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Models;
@@ -15,12 +15,10 @@ namespace OndeDoarWeb.Controllers
         private const int IdInstituicaoProvisorio = 1;
 
         private readonly INecessidadeService _necessidadeService;
-        private readonly IMapper _mapper;
 
-        public NecessidadeController(INecessidadeService necessidadeService, IMapper mapper)
+        public NecessidadeController(INecessidadeService necessidadeService)
         {
             _necessidadeService = necessidadeService;
-            _mapper = mapper;
         }
 
         private int ObterIdInstituicao()
@@ -43,7 +41,7 @@ namespace OndeDoarWeb.Controllers
         {
             var listaNecessidades = _necessidadeService.GetAll()
                 .Where(n => n.IdInstituicao == ObterIdInstituicao());
-            var listaNecessidadesModel = _mapper.Map<List<NecessidadeModel>>(listaNecessidades);
+            var listaNecessidadesModel = NecessidadeMapper.ToViewModel(listaNecessidades);
             return View(listaNecessidadesModel);
         }
 
@@ -54,27 +52,26 @@ namespace OndeDoarWeb.Controllers
             if (necessidade == null)
                 return NotFound();
 
-            NecessidadeModel necessidadeModel = _mapper.Map<NecessidadeModel>(necessidade);
-            return View(necessidadeModel);
+            return View(NecessidadeMapper.ToViewModel(necessidade));
         }
 
         // GET: NecessidadeController/Create
         public ActionResult Create()
         {
-            return View(new NecessidadeModel());
+            return View(new NecessidadeViewModel());
         }
 
         // POST: NecessidadeController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(NecessidadeModel necessidadeModel)
+        public ActionResult Create(NecessidadeViewModel necessidadeModel)
         {
             if (ModelState.IsValid)
             {
                 try
                 {
                     necessidadeModel.IdInstituicao = ObterIdInstituicao();
-                    var necessidade = _mapper.Map<Necessidade>(necessidadeModel);
+                    var necessidade = NecessidadeMapper.ToEntity(necessidadeModel);
                     _necessidadeService.Create(necessidade);
                     return RedirectToAction(nameof(Index));
                 }
@@ -93,14 +90,13 @@ namespace OndeDoarWeb.Controllers
             if (necessidade == null)
                 return NotFound();
 
-            NecessidadeModel necessidadeModel = _mapper.Map<NecessidadeModel>(necessidade);
-            return View(necessidadeModel);
+            return View(NecessidadeMapper.ToViewModel(necessidade));
         }
 
         // POST: NecessidadeController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, NecessidadeModel necessidadeModel)
+        public ActionResult Edit(int id, NecessidadeViewModel necessidadeModel)
         {
             if (ObterNecessidadeDaInstituicao(id) == null)
                 return NotFound();
@@ -111,7 +107,7 @@ namespace OndeDoarWeb.Controllers
                 {
                     necessidadeModel.Id = id;
                     necessidadeModel.IdInstituicao = ObterIdInstituicao();
-                    var necessidade = _mapper.Map<Necessidade>(necessidadeModel);
+                    var necessidade = NecessidadeMapper.ToEntity(necessidadeModel);
                     _necessidadeService.Edit(necessidade);
                     return RedirectToAction(nameof(Index));
                 }
@@ -130,8 +126,7 @@ namespace OndeDoarWeb.Controllers
             if (necessidade == null)
                 return NotFound();
 
-            NecessidadeModel necessidadeModel = _mapper.Map<NecessidadeModel>(necessidade);
-            return View(necessidadeModel);
+            return View(NecessidadeMapper.ToViewModel(necessidade));
         }
 
         // POST: NecessidadeController/Delete/5

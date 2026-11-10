@@ -1,7 +1,5 @@
-﻿using AutoMapper;
-using Core;
+﻿using Core;
 using Core.Service;
-using Mappers;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Primitives;
@@ -44,10 +42,7 @@ public class NecessidadeControllerTests
             .Setup(service => service.Get(999))
             .Returns((Necessidade?)null);
 
-        var configuracao = new MapperConfiguration(cfg => cfg.AddProfile<NecessidadeProfile>());
-        var mapper = configuracao.CreateMapper();
-
-        controller = new NecessidadeController(necessidadeServiceMock.Object, mapper);
+        controller = new NecessidadeController(necessidadeServiceMock.Object);
     }
 
     [TestMethod]
@@ -56,7 +51,7 @@ public class NecessidadeControllerTests
         var resultado = controller.Index();
 
         var viewResult = Assert.IsInstanceOfType<ViewResult>(resultado);
-        var necessidades = Assert.IsInstanceOfType<List<NecessidadeModel>>(viewResult.ViewData.Model);
+        var necessidades = Assert.IsInstanceOfType<List<NecessidadeViewModel>>(viewResult.ViewData.Model);
 
         Assert.AreEqual(2, necessidades.Count);
         CollectionAssert.AreEquivalent(
@@ -76,7 +71,7 @@ public class NecessidadeControllerTests
         var resultado = controller.Index();
 
         var viewResult = Assert.IsInstanceOfType<ViewResult>(resultado);
-        var necessidades = Assert.IsInstanceOfType<List<NecessidadeModel>>(viewResult.ViewData.Model);
+        var necessidades = Assert.IsInstanceOfType<List<NecessidadeViewModel>>(viewResult.ViewData.Model);
 
         Assert.AreEqual(0, necessidades.Count);
     }
@@ -87,7 +82,7 @@ public class NecessidadeControllerTests
         var resultado = controller.Details(1);
 
         var viewResult = Assert.IsInstanceOfType<ViewResult>(resultado);
-        var necessidade = Assert.IsInstanceOfType<NecessidadeModel>(viewResult.ViewData.Model);
+        var necessidade = Assert.IsInstanceOfType<NecessidadeViewModel>(viewResult.ViewData.Model);
 
         Assert.AreEqual(1, necessidade.Id);
         Assert.AreEqual("Cestas básicas", necessidade.Nome);
@@ -118,7 +113,7 @@ public class NecessidadeControllerTests
         var resultado = controller.Create();
 
         var viewResult = Assert.IsInstanceOfType<ViewResult>(resultado);
-        var necessidade = Assert.IsInstanceOfType<NecessidadeModel>(viewResult.ViewData.Model);
+        var necessidade = Assert.IsInstanceOfType<NecessidadeViewModel>(viewResult.ViewData.Model);
 
         Assert.AreEqual(0, necessidade.Id);
         Assert.IsTrue(necessidade.Ativa);
@@ -152,7 +147,7 @@ public class NecessidadeControllerTests
     [TestMethod]
     public void Create_QuandoModeloInvalido_NaoDeveCriarNecessidade()
     {
-        controller.ModelState.AddModelError(nameof(NecessidadeModel.Nome), "Nome da necessidade é obrigatório");
+        controller.ModelState.AddModelError(nameof(NecessidadeViewModel.Nome), "Nome da necessidade é obrigatório");
 
         var resultado = controller.Create(CriarModeloDeNovaNecessidade());
 
@@ -182,7 +177,7 @@ public class NecessidadeControllerTests
         var resultado = controller.Edit(1);
 
         var viewResult = Assert.IsInstanceOfType<ViewResult>(resultado);
-        var necessidade = Assert.IsInstanceOfType<NecessidadeModel>(viewResult.ViewData.Model);
+        var necessidade = Assert.IsInstanceOfType<NecessidadeViewModel>(viewResult.ViewData.Model);
 
         Assert.AreEqual(1, necessidade.Id);
         Assert.AreEqual("Alta", necessidade.Prioridade);
@@ -233,7 +228,7 @@ public class NecessidadeControllerTests
     [TestMethod]
     public void Edit_QuandoModeloInvalido_NaoDeveAtualizarNecessidade()
     {
-        controller.ModelState.AddModelError(nameof(NecessidadeModel.Nome), "Nome da necessidade é obrigatório");
+        controller.ModelState.AddModelError(nameof(NecessidadeViewModel.Nome), "Nome da necessidade é obrigatório");
 
         var resultado = controller.Edit(1, CriarModeloDeNovaNecessidade());
 
@@ -256,7 +251,7 @@ public class NecessidadeControllerTests
         var resultado = controller.Delete(1);
 
         var viewResult = Assert.IsInstanceOfType<ViewResult>(resultado);
-        var necessidade = Assert.IsInstanceOfType<NecessidadeModel>(viewResult.ViewData.Model);
+        var necessidade = Assert.IsInstanceOfType<NecessidadeViewModel>(viewResult.ViewData.Model);
 
         Assert.AreEqual(1, necessidade.Id);
         necessidadeServiceMock.Verify(service => service.Get(1), Times.Once);
@@ -295,9 +290,9 @@ public class NecessidadeControllerTests
         Assert.AreEqual(nameof(NecessidadeController.Index), redirectResult.ActionName);
     }
 
-    private static NecessidadeModel CriarModeloDeNovaNecessidade()
+    private static NecessidadeViewModel CriarModeloDeNovaNecessidade()
     {
-        return new NecessidadeModel
+        return new NecessidadeViewModel
         {
             Id = 4,
             Nome = "Fraldas infantis",
