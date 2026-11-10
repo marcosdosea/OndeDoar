@@ -1,5 +1,24 @@
-obj/
-bin/
-.DS_Store
-/Codigo/OndeDoar/TestResults
+# Arquivos gerados na compilação (.NET)
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio e Rider
 .vs/
+.idea/
+*.user
+*.suo
+*.userprefs
+
+# Visual Studio Code
+.vscode/
+
+# Resultados de testes
+[Tt]est[Rr]esult*/
+
+# Pacotes NuGet
+*.nupkg
+
+# Sistema operacional
+Thumbs.db
+Desktop.ini
+.DS_Store
