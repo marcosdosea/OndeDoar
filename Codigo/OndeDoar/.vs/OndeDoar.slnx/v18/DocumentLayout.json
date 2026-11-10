@@ -3,28 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6F7E9EC3-ADC5-485B-A9C5-A7FA1EF388AC}|ServiceTest\\ServiceTest.csproj|c:\\users\\david\\desktop\\ondedoar\\codigo\\ondedoar\\servicetest\\instituicaoservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F7E9EC3-ADC5-485B-A9C5-A7FA1EF388AC}|ServiceTest\\ServiceTest.csproj|solutionrelative:servicetest\\instituicaoservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|c:\\users\\david\\desktop\\ondedoar\\codigo\\ondedoar\\ondedoarweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|solutionrelative:ondedoarweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F7E9EC3-ADC5-485B-A9C5-A7FA1EF388AC}|ServiceTest\\ServiceTest.csproj|c:\\users\\david\\desktop\\ondedoar\\codigo\\ondedoar\\servicetest\\avaliacaoservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F7E9EC3-ADC5-485B-A9C5-A7FA1EF388AC}|ServiceTest\\ServiceTest.csproj|solutionrelative:servicetest\\avaliacaoservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|c:\\users\\david\\desktop\\ondedoar\\codigo\\ondedoar\\ondedoarweb\\controllers\\instituicaocontrollercs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|solutionrelative:ondedoarweb\\controllers\\instituicaocontrollercs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F7E9EC3-ADC5-485B-A9C5-A7FA1EF388AC}|ServiceTest\\ServiceTest.csproj|c:\\users\\david\\desktop\\ondedoar\\codigo\\ondedoar\\servicetest\\servicetest.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{6F7E9EC3-ADC5-485B-A9C5-A7FA1EF388AC}|ServiceTest\\ServiceTest.csproj|solutionrelative:servicetest\\servicetest.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|c:\\users\\david\\desktop\\ondedoar\\codigo\\ondedoar\\ondedoarweb\\mappers\\instituicaomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|solutionrelative:ondedoarweb\\mappers\\instituicaomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5ED06CAD-956C-C94D-BC0C-E89E30A887C2}|Core\\Core.csproj|c:\\users\\david\\desktop\\ondedoar\\codigo\\ondedoar\\core\\instituicao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5ED06CAD-956C-C94D-BC0C-E89E30A887C2}|Core\\Core.csproj|solutionrelative:core\\instituicao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5ED06CAD-956C-C94D-BC0C-E89E30A887C2}|Core\\Core.csproj|c:\\users\\david\\desktop\\ondedoar\\codigo\\ondedoar\\core\\iinstituicaoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5ED06CAD-956C-C94D-BC0C-E89E30A887C2}|Core\\Core.csproj|solutionrelative:core\\iinstituicaoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA958041-DDEF-48C0-BE1D-078961C95C4A}|Service\\Service.csproj|c:\\users\\david\\desktop\\ondedoar\\codigo\\ondedoar\\service\\instituicaoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA958041-DDEF-48C0-BE1D-078961C95C4A}|Service\\Service.csproj|solutionrelative:service\\instituicaoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|c:\\users\\david\\desktop\\ondedoar\\codigo\\ondedoar\\ondedoarweb\\models\\instituicaoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D9A754F-C50B-22C6-B603-B0FC4648F9E9}|OndeDoarWeb\\OndeDoarWeb.csproj|solutionrelative:ondedoarweb\\models\\instituicaoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,93 +26,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AvaliacaoServiceTests.cs",
-              "DocumentMoniker": "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\ServiceTest\\AvaliacaoServiceTests.cs",
-              "RelativeDocumentMoniker": "ServiceTest\\AvaliacaoServiceTests.cs",
-              "ToolTip": "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\ServiceTest\\AvaliacaoServiceTests.cs",
-              "RelativeToolTip": "ServiceTest\\AvaliacaoServiceTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\Program.cs",
+              "RelativeDocumentMoniker": "OndeDoarWeb\\Program.cs",
+              "ToolTip": "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\Program.cs",
+              "RelativeToolTip": "OndeDoarWeb\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-10T02:33:05.319Z",
+              "WhenOpened": "2026-11-10T03:10:30.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "InstituicaoControllercs.cs",
+              "DocumentMoniker": "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\Controllers\\InstituicaoControllercs.cs",
+              "RelativeDocumentMoniker": "OndeDoarWeb\\Controllers\\InstituicaoControllercs.cs",
+              "ToolTip": "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\Controllers\\InstituicaoControllercs.cs",
+              "RelativeToolTip": "OndeDoarWeb\\Controllers\\InstituicaoControllercs.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAowIEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-10T03:09:33.224Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ServiceTest",
-              "DocumentMoniker": "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\ServiceTest\\ServiceTest.csproj",
-              "RelativeDocumentMoniker": "ServiceTest\\ServiceTest.csproj",
-              "ToolTip": "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\ServiceTest\\ServiceTest.csproj",
-              "RelativeToolTip": "ServiceTest\\ServiceTest.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-11-10T02:28:22.181Z",
+              "Title": "InstituicaoMapper.cs",
+              "DocumentMoniker": "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\Mappers\\InstituicaoMapper.cs",
+              "RelativeDocumentMoniker": "OndeDoarWeb\\Mappers\\InstituicaoMapper.cs",
+              "ToolTip": "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\Mappers\\InstituicaoMapper.cs",
+              "RelativeToolTip": "OndeDoarWeb\\Mappers\\InstituicaoMapper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-10T03:07:22.835Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "InstituicaoServiceTests.cs",
-              "DocumentMoniker": "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\ServiceTest\\InstituicaoServiceTests.cs",
-              "RelativeDocumentMoniker": "ServiceTest\\InstituicaoServiceTests.cs",
-              "ToolTip": "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\ServiceTest\\InstituicaoServiceTests.cs",
-              "RelativeToolTip": "ServiceTest\\InstituicaoServiceTests.cs",
-              "ViewState": "AgIAAIoAAAAAAAAAAAAowK8AAAABAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "InstituicaoViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\Models\\InstituicaoViewModel.cs",
+              "RelativeDocumentMoniker": "OndeDoarWeb\\Models\\InstituicaoViewModel.cs",
+              "ToolTip": "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\Models\\InstituicaoViewModel.cs",
+              "RelativeToolTip": "OndeDoarWeb\\Models\\InstituicaoViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-10T02:28:37.539Z",
+              "WhenOpened": "2026-11-10T03:03:08.507Z",
               "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Instituicao.cs",
-              "DocumentMoniker": "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\Core\\Instituicao.cs",
-              "RelativeDocumentMoniker": "Core\\Instituicao.cs",
-              "ToolTip": "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\Core\\Instituicao.cs",
-              "RelativeToolTip": "Core\\Instituicao.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-10T02:09:55.738Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IInstituicaoService.cs",
-              "DocumentMoniker": "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\Core\\IInstituicaoService.cs",
-              "RelativeDocumentMoniker": "Core\\IInstituicaoService.cs",
-              "ToolTip": "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\Core\\IInstituicaoService.cs",
-              "RelativeToolTip": "Core\\IInstituicaoService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-10T02:07:16.522Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "InstituicaoService.cs",
-              "DocumentMoniker": "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\Service\\InstituicaoService.cs",
-              "RelativeDocumentMoniker": "Service\\InstituicaoService.cs",
-              "ToolTip": "C:\\Users\\david\\Desktop\\OndeDoar\\Codigo\\OndeDoar\\Service\\InstituicaoService.cs",
-              "RelativeToolTip": "Service\\InstituicaoService.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAQwGIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-10T02:06:13.702Z",
-              "EditorCaption": ""
             }
           ]
         }
