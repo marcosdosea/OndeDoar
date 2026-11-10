@@ -1,0 +1,24 @@
+﻿@model Models.NecessidadeViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<dl class="row">
+    <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Nome)</dt>
+    <dd class="col-sm-9">@Html.DisplayFor(m => m.Nome)</dd>
+    <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Categoria)</dt>
+    <dd class="col-sm-9">@Html.DisplayFor(m => m.Categoria)</dd>
+    <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Descricao)</dt>
+    <dd class="col-sm-9">@Html.DisplayFor(m => m.Descricao)</dd>
+    <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Prioridade)</dt>
+    <dd class="col-sm-9">@Html.DisplayFor(m => m.Prioridade)</dd>
+    <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Ativa)</dt>
+    <dd class="col-sm-9">@Html.DisplayFor(m => m.Ativa)</dd>
+</dl>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
