@@ -18,6 +18,7 @@ namespace DoadorWeb
             builder.Services.AddTransient<IAvaliacaoService, AvaliacaoService>();
             builder.Services.AddTransient<INecessidadeService, NecessidadeService>();
 
+            builder.Services.AddTransient<IPostagemService, PostagemService>();
             builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             builder.Services.AddDbContext<OndeDoarContext>(
