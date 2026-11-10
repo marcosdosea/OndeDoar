@@ -26,8 +26,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -51,8 +55,7 @@
               "RelativeToolTip": "OndeDoarWeb\\Controllers\\InstituicaoControllercs.cs",
               "ViewState": "AgIAAFwAAAAAAAAAAAAowIEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-10T03:09:33.224Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-10T03:09:33.224Z"
             },
             {
               "$type": "Document",
@@ -64,8 +67,7 @@
               "RelativeToolTip": "OndeDoarWeb\\Mappers\\InstituicaoMapper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-10T03:07:22.835Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-10T03:07:22.835Z"
             },
             {
               "$type": "Document",
@@ -77,12 +79,7 @@
               "RelativeToolTip": "OndeDoarWeb\\Models\\InstituicaoViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-10T03:03:08.507Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+              "WhenOpened": "2026-11-10T03:03:08.507Z"
             }
           ]
         }
