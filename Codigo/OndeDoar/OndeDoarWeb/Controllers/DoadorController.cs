@@ -36,7 +36,7 @@ namespace OndeDoarWeb.Controllers
         }
 
         // GET: DoadorController/Create
-        public ActionResult Create()
+        public ActionResult InserirDoador()
         {
             return View();
         }
@@ -44,7 +44,7 @@ namespace OndeDoarWeb.Controllers
         // POST: DoadorController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(DoadorModel doadorModel)
+        public ActionResult InserirDoador(DoadorModel doadorModel)
         {
             if (ModelState.IsValid)
             {
@@ -55,7 +55,7 @@ namespace OndeDoarWeb.Controllers
         }
 
         // GET: DoadorController/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult AlterarDoador(int id)
         {
             Doador doador = _doadorService.Obter(id);
             DoadorModel doadorModel = _mapper.Map<DoadorModel>(doador);
@@ -65,7 +65,7 @@ namespace OndeDoarWeb.Controllers
         // POST: DoadorController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, DoadorModel doadorModel)
+        public ActionResult AlterarDoador(int id, DoadorModel doadorModel)
         {
            if (ModelState.IsValid)
             {
@@ -76,7 +76,7 @@ namespace OndeDoarWeb.Controllers
         }
 
         // GET: DoadorController/Delete/5
-        public ActionResult Delete(int id)
+        public ActionResult RemoverDoador(int id)
         {
             Doador doador = _doadorService.Obter(id);
             DoadorModel doadorModel = _mapper.Map<DoadorModel>(doador);
@@ -86,7 +86,7 @@ namespace OndeDoarWeb.Controllers
         // POST: DoadorController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult RemoverDoador(int id, IFormCollection collection)
         {
             _doadorService.Remover(id);
             return RedirectToAction(nameof(Index));
