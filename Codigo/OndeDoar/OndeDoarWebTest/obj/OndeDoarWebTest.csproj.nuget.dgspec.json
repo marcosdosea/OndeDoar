@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\felip\\Área de Trabalho\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWebTest\\OndeDoarWebTest.csproj": {}
+    "C:\\Users\\Ariele Mendonça\\Desktop\\ariele\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWebTest\\OndeDoarWebTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\felip\\Área de Trabalho\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj": {
+    "C:\\Users\\Ariele Mendonça\\Desktop\\ariele\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\felip\\Área de Trabalho\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\Users\\Ariele Mendonça\\Desktop\\ariele\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\Users\\felip\\Área de Trabalho\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj",
-        "packagesPath": "C:\\Users\\felip\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\felip\\Área de Trabalho\\OndeDoar\\Codigo\\OndeDoar\\Core\\obj\\",
+        "projectPath": "C:\\Users\\Ariele Mendonça\\Desktop\\ariele\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj",
+        "packagesPath": "C:\\Users\\Ariele Mendonça\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ariele Mendonça\\Desktop\\ariele\\OndeDoar\\Codigo\\OndeDoar\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\felip\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ariele Mendonça\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -45,7 +45,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.400"
+        "SdkAnalysisLevel": "11.0.100"
       },
       "frameworks": {
         "net10.0": {
@@ -85,7 +85,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\11.0.100-rc.3.26522.148/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -363,20 +363,20 @@
         }
       }
     },
-    "C:\\Users\\felip\\Área de Trabalho\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWebTest\\OndeDoarWebTest.csproj": {
+    "C:\\Users\\Ariele Mendonça\\Desktop\\ariele\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWebTest\\OndeDoarWebTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\felip\\Área de Trabalho\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWebTest\\OndeDoarWebTest.csproj",
+        "projectUniqueName": "C:\\Users\\Ariele Mendonça\\Desktop\\ariele\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWebTest\\OndeDoarWebTest.csproj",
         "projectName": "OndeDoarWebTest",
-        "projectPath": "C:\\Users\\felip\\Área de Trabalho\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWebTest\\OndeDoarWebTest.csproj",
-        "packagesPath": "C:\\Users\\felip\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\felip\\Área de Trabalho\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWebTest\\obj\\",
+        "projectPath": "C:\\Users\\Ariele Mendonça\\Desktop\\ariele\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWebTest\\OndeDoarWebTest.csproj",
+        "packagesPath": "C:\\Users\\Ariele Mendonça\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ariele Mendonça\\Desktop\\ariele\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWebTest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\felip\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ariele Mendonça\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -392,14 +392,14 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\felip\\Área de Trabalho\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj": {
-                "projectPath": "C:\\Users\\felip\\Área de Trabalho\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj"
+              "C:\\Users\\Ariele Mendonça\\Desktop\\ariele\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\Ariele Mendonça\\Desktop\\ariele\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj"
               },
-              "C:\\Users\\felip\\Área de Trabalho\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\OndeDoarWeb.csproj": {
-                "projectPath": "C:\\Users\\felip\\Área de Trabalho\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\OndeDoarWeb.csproj"
+              "C:\\Users\\Ariele Mendonça\\Desktop\\ariele\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\OndeDoarWeb.csproj": {
+                "projectPath": "C:\\Users\\Ariele Mendonça\\Desktop\\ariele\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\OndeDoarWeb.csproj"
               },
-              "C:\\Users\\felip\\Área de Trabalho\\OndeDoar\\Codigo\\OndeDoar\\Service\\Service.csproj": {
-                "projectPath": "C:\\Users\\felip\\Área de Trabalho\\OndeDoar\\Codigo\\OndeDoar\\Service\\Service.csproj"
+              "C:\\Users\\Ariele Mendonça\\Desktop\\ariele\\OndeDoar\\Codigo\\OndeDoar\\Service\\Service.csproj": {
+                "projectPath": "C:\\Users\\Ariele Mendonça\\Desktop\\ariele\\OndeDoar\\Codigo\\OndeDoar\\Service\\Service.csproj"
               }
             }
           }
@@ -414,7 +414,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.400"
+        "SdkAnalysisLevel": "11.0.100"
       },
       "frameworks": {
         "net10.0": {
@@ -446,7 +446,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\11.0.100-rc.3.26522.148/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -724,20 +724,20 @@
         }
       }
     },
-    "C:\\Users\\felip\\Área de Trabalho\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\OndeDoarWeb.csproj": {
+    "C:\\Users\\Ariele Mendonça\\Desktop\\ariele\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\OndeDoarWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\felip\\Área de Trabalho\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\OndeDoarWeb.csproj",
+        "projectUniqueName": "C:\\Users\\Ariele Mendonça\\Desktop\\ariele\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\OndeDoarWeb.csproj",
         "projectName": "OndeDoarWeb",
-        "projectPath": "C:\\Users\\felip\\Área de Trabalho\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\OndeDoarWeb.csproj",
-        "packagesPath": "C:\\Users\\felip\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\felip\\Área de Trabalho\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\obj\\",
+        "projectPath": "C:\\Users\\Ariele Mendonça\\Desktop\\ariele\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\OndeDoarWeb.csproj",
+        "packagesPath": "C:\\Users\\Ariele Mendonça\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ariele Mendonça\\Desktop\\ariele\\OndeDoar\\Codigo\\OndeDoar\\OndeDoarWeb\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\felip\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ariele Mendonça\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -753,11 +753,11 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\felip\\Área de Trabalho\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj": {
-                "projectPath": "C:\\Users\\felip\\Área de Trabalho\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj"
+              "C:\\Users\\Ariele Mendonça\\Desktop\\ariele\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\Ariele Mendonça\\Desktop\\ariele\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj"
               },
-              "C:\\Users\\felip\\Área de Trabalho\\OndeDoar\\Codigo\\OndeDoar\\Service\\Service.csproj": {
-                "projectPath": "C:\\Users\\felip\\Área de Trabalho\\OndeDoar\\Codigo\\OndeDoar\\Service\\Service.csproj"
+              "C:\\Users\\Ariele Mendonça\\Desktop\\ariele\\OndeDoar\\Codigo\\OndeDoar\\Service\\Service.csproj": {
+                "projectPath": "C:\\Users\\Ariele Mendonça\\Desktop\\ariele\\OndeDoar\\Codigo\\OndeDoar\\Service\\Service.csproj"
               }
             }
           }
@@ -772,7 +772,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.400"
+        "SdkAnalysisLevel": "11.0.100"
       },
       "frameworks": {
         "net10.0": {
@@ -831,7 +831,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\11.0.100-rc.3.26522.148/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",
@@ -1249,20 +1249,20 @@
         }
       }
     },
-    "C:\\Users\\felip\\Área de Trabalho\\OndeDoar\\Codigo\\OndeDoar\\Service\\Service.csproj": {
+    "C:\\Users\\Ariele Mendonça\\Desktop\\ariele\\OndeDoar\\Codigo\\OndeDoar\\Service\\Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\felip\\Área de Trabalho\\OndeDoar\\Codigo\\OndeDoar\\Service\\Service.csproj",
+        "projectUniqueName": "C:\\Users\\Ariele Mendonça\\Desktop\\ariele\\OndeDoar\\Codigo\\OndeDoar\\Service\\Service.csproj",
         "projectName": "Service",
-        "projectPath": "C:\\Users\\felip\\Área de Trabalho\\OndeDoar\\Codigo\\OndeDoar\\Service\\Service.csproj",
-        "packagesPath": "C:\\Users\\felip\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\felip\\Área de Trabalho\\OndeDoar\\Codigo\\OndeDoar\\Service\\obj\\",
+        "projectPath": "C:\\Users\\Ariele Mendonça\\Desktop\\ariele\\OndeDoar\\Codigo\\OndeDoar\\Service\\Service.csproj",
+        "packagesPath": "C:\\Users\\Ariele Mendonça\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ariele Mendonça\\Desktop\\ariele\\OndeDoar\\Codigo\\OndeDoar\\Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\felip\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ariele Mendonça\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -1278,8 +1278,8 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\felip\\Área de Trabalho\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj": {
-                "projectPath": "C:\\Users\\felip\\Área de Trabalho\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj"
+              "C:\\Users\\Ariele Mendonça\\Desktop\\ariele\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\Ariele Mendonça\\Desktop\\ariele\\OndeDoar\\Codigo\\OndeDoar\\Core\\Core.csproj"
               }
             }
           }
@@ -1294,7 +1294,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.400"
+        "SdkAnalysisLevel": "11.0.100"
       },
       "frameworks": {
         "net10.0": {
@@ -1324,7 +1324,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\11.0.100-rc.3.26522.148/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

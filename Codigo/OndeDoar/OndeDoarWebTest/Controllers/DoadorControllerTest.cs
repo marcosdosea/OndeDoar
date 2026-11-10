@@ -70,7 +70,7 @@ namespace OndeDoarWebTests.Controllers
         [TestMethod]
         public void CreateTest()
         {
-            var result = controller.Create() as ViewResult;
+            var result = controller.InserirDoador() as ViewResult;
 
             Assert.IsNotNull(result);
         }
@@ -84,7 +84,7 @@ namespace OndeDoarWebTests.Controllers
                 mapper.Map<Doador>(It.IsAny<DoadorModel>()))
                 .Returns(GetTestDoador());
 
-            var result = controller.Create(doadorModel) as RedirectToActionResult;
+            var result = controller.InserirDoador(doadorModel) as RedirectToActionResult;
 
             Assert.IsNotNull(result);
             Assert.AreEqual("Index", result.ActionName);
@@ -100,7 +100,7 @@ namespace OndeDoarWebTests.Controllers
 
             controller.ModelState.AddModelError("Nome", "Campo obrigatório");
 
-            var result = controller.Create(doadorModel) as RedirectToActionResult;
+            var result = controller.InserirDoador(doadorModel) as RedirectToActionResult;
 
             Assert.IsNotNull(result);
             Assert.AreEqual("Index", result.ActionName);
@@ -116,7 +116,7 @@ namespace OndeDoarWebTests.Controllers
                 mapper.Map<DoadorModel>(It.IsAny<Doador>()))
                 .Returns(GetTestDoadorModel());
 
-            var result = controller.Edit(1) as ViewResult;
+            var result = controller.AlterarDoador(1) as ViewResult;
 
             Assert.IsNotNull(result);
             Assert.IsInstanceOfType(result.Model, typeof(DoadorModel));
@@ -131,7 +131,7 @@ namespace OndeDoarWebTests.Controllers
                 mapper.Map<Doador>(It.IsAny<DoadorModel>()))
                 .Returns(GetTestDoador());
 
-            var result = controller.Edit(1, doadorModel) as RedirectToActionResult;
+            var result = controller.AlterarDoador(1, doadorModel) as RedirectToActionResult;
 
             Assert.IsNotNull(result);
             Assert.AreEqual("Index", result.ActionName);
@@ -147,7 +147,7 @@ namespace OndeDoarWebTests.Controllers
 
             controller.ModelState.AddModelError("Nome", "Campo obrigatório");
 
-            var result = controller.Edit(1, doadorModel) as RedirectToActionResult;
+            var result = controller.AlterarDoador(1, doadorModel) as RedirectToActionResult;
 
             Assert.IsNotNull(result);
             Assert.AreEqual("Index", result.ActionName);
@@ -163,7 +163,7 @@ namespace OndeDoarWebTests.Controllers
                 mapper.Map<DoadorModel>(It.IsAny<Doador>()))
                 .Returns(GetTestDoadorModel());
 
-            var result = controller.Delete(1) as ViewResult;
+            var result = controller.RemoverDoador(1) as ViewResult;
 
             Assert.IsNotNull(result);
             Assert.IsInstanceOfType(result.Model, typeof(DoadorModel));
@@ -176,7 +176,7 @@ namespace OndeDoarWebTests.Controllers
                 new Dictionary<string, StringValues>()
             );
 
-            var result = controller.Delete(1, collection) as RedirectToActionResult;
+            var result = controller.RemoverDoador(1, collection) as RedirectToActionResult;
 
             Assert.IsNotNull(result);
             Assert.AreEqual("Index", result.ActionName);
