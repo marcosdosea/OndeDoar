@@ -24,7 +24,7 @@ namespace DoadorWeb
             builder.Services.AddTransient<INotificacaoService, NotificacaoService>();
 
             builder.Services.AddDbContext<OndeDoarContext>(
-            options => options.UseMySQL(builder.Configuration.GetConnectionString("OndeDoarConnection")));
+            options => options.UseMySQL(builder.Configuration.GetConnectionString("OndeDoarConnection") ?? throw new InvalidOperationException("Connection string 'OndeDoarConnection' not found.")));
 
 
             var app = builder.Build();

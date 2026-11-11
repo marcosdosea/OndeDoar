@@ -12,8 +12,8 @@ namespace OndeDoarWebTests.Controllers
     [TestClass]
     public class DoadorControllerTests
     {
-        private Mock<IDoadorService> mockService;
-        private DoadorController controller;
+        private Mock<IDoadorService> mockService = null!;
+        private DoadorController controller = null!;
 
         [TestInitialize]
         public void Initialize()
@@ -43,7 +43,7 @@ namespace OndeDoarWebTests.Controllers
             var result = controller.Index() as ViewResult;
 
             Assert.IsNotNull(result);
-            Assert.IsInstanceOfType(result.Model, typeof(List<DoadorModel>));
+            Assert.IsInstanceOfType(result.Model, typeof(List<DoadorViewModel>));
         }
 
         [TestMethod]
@@ -52,7 +52,7 @@ namespace OndeDoarWebTests.Controllers
             var result = controller.Details(1) as ViewResult;
 
             Assert.IsNotNull(result);
-            Assert.IsInstanceOfType(result.Model, typeof(DoadorModel));
+            Assert.IsInstanceOfType(result.Model, typeof(DoadorViewModel));
         }
 
         [TestMethod]
@@ -99,7 +99,7 @@ namespace OndeDoarWebTests.Controllers
             var result = controller.AlterarDoador(1) as ViewResult;
 
             Assert.IsNotNull(result);
-            Assert.IsInstanceOfType(result.Model, typeof(DoadorModel));
+            Assert.IsInstanceOfType(result.Model, typeof(DoadorViewModel));
         }
 
         [TestMethod]
@@ -138,7 +138,7 @@ namespace OndeDoarWebTests.Controllers
             var result = controller.RemoverDoador(1) as ViewResult;
 
             Assert.IsNotNull(result);
-            Assert.IsInstanceOfType(result.Model, typeof(DoadorModel));
+            Assert.IsInstanceOfType(result.Model, typeof(DoadorViewModel));
         }
 
         [TestMethod]
@@ -168,9 +168,9 @@ namespace OndeDoarWebTests.Controllers
             };
         }
 
-        private DoadorModel GetTestDoadorModel()
+        private DoadorViewModel GetTestDoadorModel()
         {
-            return new DoadorModel
+            return new DoadorViewModel
             {
                 Id = 1,
                 Nome = "João Silva",

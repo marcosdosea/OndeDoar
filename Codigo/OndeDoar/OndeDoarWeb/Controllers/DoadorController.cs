@@ -21,7 +21,7 @@ namespace OndeDoarWeb.Controllers
         public ActionResult Index()
         {
             var listarDoadores = _doadorService.ObterTodos();
-            var listarDoadoresModel = listarDoadores.Adapt<List<DoadorModel>>();
+            var listarDoadoresModel = listarDoadores.Adapt<List<DoadorViewModel>>();
             return View(listarDoadoresModel);
         }
 
@@ -29,7 +29,7 @@ namespace OndeDoarWeb.Controllers
         public ActionResult Details(int id)
         {
             Doador doador = _doadorService.Obter(id);
-            DoadorModel doadorModel = doador.Adapt<DoadorModel>();
+            DoadorViewModel doadorModel = doador.Adapt<DoadorViewModel>();
             return View(doadorModel);
         }
 
@@ -42,7 +42,7 @@ namespace OndeDoarWeb.Controllers
         // POST: DoadorController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult InserirDoador(DoadorModel doadorModel)
+        public ActionResult InserirDoador(DoadorViewModel doadorModel)
         {
             if (ModelState.IsValid)
             {
@@ -56,14 +56,14 @@ namespace OndeDoarWeb.Controllers
         public ActionResult AlterarDoador(int id)
         {
             Doador doador = _doadorService.Obter(id);
-            DoadorModel doadorModel = doador.Adapt<DoadorModel>();
+            DoadorViewModel doadorModel = doador.Adapt<DoadorViewModel>();
             return View(doadorModel);
         }
 
         // POST: DoadorController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult AlterarDoador(int id, DoadorModel doadorModel)
+        public ActionResult AlterarDoador(int id, DoadorViewModel doadorModel)
         {
            if (ModelState.IsValid)
             {
@@ -77,7 +77,7 @@ namespace OndeDoarWeb.Controllers
         public ActionResult RemoverDoador(int id)
         {
             Doador doador = _doadorService.Obter(id);
-            DoadorModel doadorModel = doador.Adapt<DoadorModel>();
+            DoadorViewModel doadorModel = doador.Adapt<DoadorViewModel>();
             return View(doadorModel);
         }
 

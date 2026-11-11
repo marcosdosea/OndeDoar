@@ -5,10 +5,10 @@ namespace Service
 {
     public class DoadorService : IDoadorService
     {
-        private readonly OndeDoarContext _context;
+        private readonly OndeDoarContext context;
         public DoadorService(OndeDoarContext context)
         {
-            _context = context;
+            this.context = context;
         }
 
         /// <summary>
@@ -17,8 +17,8 @@ namespace Service
         /// <param name="doador">Dados do doador.</param>
         public void Editar(Doador doador)
         {
-            _context.Update(doador);
-            _context.SaveChanges();
+            context.Update(doador);
+            context.SaveChanges();
         }
 
         /// <summary>
@@ -28,8 +28,8 @@ namespace Service
         /// <returns>Indentificador do doador inserido.</returns>
         public int Inserir(Doador doador)
         {
-            _context.Doadors.Add(doador);
-            _context.SaveChanges();
+            context.Doadors.Add(doador);
+            context.SaveChanges();
             return doador.Id;
         }
 
@@ -40,7 +40,7 @@ namespace Service
         /// <returns>O doador com o identificador especificado, ou null se nenhum doador correspondente for encontrado.</returns>
         public Doador Obter(int id)
         {
-            Doador doador = _context.Doadors.Find(id);
+            Doador? doador = context.Doadors.Find(id);
             if(doador == null)
             {
                 throw new ServiceException($"Doador com id {id} não encontrado.", new Exception());
@@ -54,7 +54,7 @@ namespace Service
         /// <returns>Uma coleção enumerável com todos os doadores.</returns>
         public IEnumerable<Doador> ObterTodos()
         {
-            return _context.Doadors.ToList();
+            return context.Doadors.ToList();
         }
 
         /// <summary>
@@ -63,9 +63,9 @@ namespace Service
         /// <param name="id">O identificador do doador para remover.</param>
         public void Remover(int id)
         {
-            var _doador = _context.Doadors.Find(id);
-            _context.Doadors.Remove(_doador);
-            _context.SaveChanges();
+            var _doador = Obter(id);
+            context.Doadors.Remove(_doador);
+            context.SaveChanges();
         }
     }
 }
