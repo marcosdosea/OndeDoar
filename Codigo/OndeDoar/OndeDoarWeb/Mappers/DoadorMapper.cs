@@ -9,7 +9,7 @@ namespace Mappers
     {
         public DoadorMapper()
         {
-            TypeAdapterConfig<Doador, DoadorModel>
+            TypeAdapterConfig<Doador, DoadorViewModel>
                 .NewConfig()
                 .TwoWays();
         }
