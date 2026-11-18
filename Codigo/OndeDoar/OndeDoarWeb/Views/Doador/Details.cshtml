@@ -4,35 +4,45 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<div class="container">
 
-<div>
-    <h4>DoadorModel</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-    </dl>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Telefone)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Telefone)
-        </dd>
-    </dl>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Nome)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Nome)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="AlterarDoador" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <h1>Details</h1>
+
+    <div>
+        <h4>DoadorModel</h4>
+        <hr />
+
+        <dl class="row">
+
+            <dt class="col-12 col-sm-2">
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+            <dd class="col-12 col-sm-10">
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+
+            <dt class="col-12 col-sm-2">
+                @Html.DisplayNameFor(model => model.Telefone)
+            </dt>
+            <dd class="col-12 col-sm-10">
+                @Html.DisplayFor(model => model.Telefone)
+            </dd>
+
+            <dt class="col-12 col-sm-2">
+                @Html.DisplayNameFor(model => model.Nome)
+            </dt>
+            <dd class="col-12 col-sm-10">
+                @Html.DisplayFor(model => model.Nome)
+            </dd>
+
+        </dl>
+    </div>
+
+    <div class="mt-3">
+        <a asp-action="AlterarDoador"
+           asp-route-id="@Model?.Id">Edit</a> |
+
+        <a asp-action="Index">Back to List</a>
+    </div>
+
 </div>
