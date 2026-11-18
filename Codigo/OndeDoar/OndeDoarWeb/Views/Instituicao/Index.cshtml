@@ -1,72 +1,159 @@
 ﻿@model IEnumerable<OndeDoarWeb.Models.InstituicaoViewModel>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Manter instituições";
+
+    string FormatarCnpj(string cnpj) =>
+        cnpj.Length == 14
+            ? $"{cnpj[..2]}.{cnpj[2..5]}.{cnpj[5..8]}/{cnpj[8..12]}-{cnpj[12..]}"
+            : cnpj;
+
+    var total = Model.Count();
+    var cidades = Model.Select(i => i.Cidade).Distinct(StringComparer.OrdinalIgnoreCase).Count();
+    var estados = Model.Select(i => i.Estado).Distinct(StringComparer.OrdinalIgnoreCase).Count();
+    var busca = ViewData["Nome"] as string;
 }
 
-<h1>Index</h1>
+<link rel="stylesheet" href="~/css/instituicao.css" asp-append-version="true" />
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.NomeFantasia)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.RazaoSocial)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Cnpj)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Cidade)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Estado)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Telefone)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Email)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.NomeFantasia)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.RazaoSocial)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Cnpj)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Cidade)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Estado)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Telefone)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Email)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+<div class="inst-layout">
+    <nav class="inst-menu">
+        <a asp-controller="Instituicao" asp-action="Index" class="inst-menu-item ativo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l9-6 9 6" /><path d="M5 10v8M9 10v8M15 10v8M19 10v8" /><path d="M3 21h18" /></svg>
+            Instituições
+        </a>
+        <a href="#" class="inst-menu-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6z" /><path d="M9 12l2 2 4-4" /></svg>
+            Aprovações
+        </a>
+        <a asp-controller="Avaliacao" asp-action="Index" class="inst-menu-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.2 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z" /></svg>
+            Avaliações
+        </a>
+        <a href="#" class="inst-menu-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3" /><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3h0a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5h0a1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8v0a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z" /></svg>
+            Configurações
+        </a>
+    </nav>
+
+    <div class="inst-pagina">
+        <div class="inst-topo">
+            <span>Painel administrativo</span>
+            <span class="inst-avatar-admin">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4" /><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7" /></svg>
+            </span>
+        </div>
+
+        <h1 class="inst-titulo">Manter instituições</h1>
+        <p class="inst-subtitulo">Gerencie as instituições cadastradas e acompanhe cada organização.</p>
+
+        <div class="inst-resumo">
+            <div class="inst-resumo-item">
+                <span class="inst-icone">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l9-6 9 6" /><path d="M5 10v8M9 10v8M15 10v8M19 10v8" /><path d="M3 21h18" /></svg>
+                </span>
+                <div>
+                    <div class="inst-resumo-rotulo">Instituições cadastradas</div>
+                    <div class="inst-resumo-valor">@total</div>
+                </div>
+            </div>
+            <div class="inst-resumo-item">
+                <span class="inst-icone">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.3-6-10a6 6 0 1 1 12 0c0 4.7-6 10-6 10z" /><circle cx="12" cy="11" r="2" /></svg>
+                </span>
+                <div>
+                    <div class="inst-resumo-rotulo">Cidades atendidas</div>
+                    <div class="inst-resumo-valor">@cidades</div>
+                </div>
+            </div>
+            <div class="inst-resumo-item">
+                <span class="inst-icone">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4" /><path d="M5 4h11l-2 4 2 4H5" /></svg>
+                </span>
+                <div>
+                    <div class="inst-resumo-rotulo">Estados</div>
+                    <div class="inst-resumo-valor">@estados</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="inst-barra">
+            <form asp-action="Index" method="get" class="inst-busca">
+                <input type="search" name="nome" value="@busca" placeholder="Buscar instituição..." />
+                <button type="submit" class="inst-btn inst-btn-contorno">Buscar</button>
+                @if (!string.IsNullOrWhiteSpace(busca))
+                {
+                    <a asp-action="Index" class="inst-link">Limpar</a>
+                }
+            </form>
+            <a asp-action="Create" class="inst-btn inst-btn-primario">+ Nova instituição</a>
+        </div>
+
+        <div class="inst-tabela-caixa">
+            <table class="inst-tabela">
+                <thead>
+                    <tr>
+                        <th>Instituição</th>
+                        <th>CNPJ</th>
+                        <th>Localização</th>
+                        <th>Contato</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (!Model.Any())
+                    {
+                        <tr>
+                            <td colspan="5" class="inst-vazio">Nenhuma instituição encontrada.</td>
+                        </tr>
+                    }
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                <div class="inst-instituicao">
+                                    <span class="inst-avatar">
+                                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l9-6 9 6" /><path d="M5 10v8M9 10v8M15 10v8M19 10v8" /><path d="M3 21h18" /></svg>
+                                    </span>
+                                    <div>
+                                        <div class="inst-nome">@item.NomeFantasia</div>
+                                        <div class="inst-secundario">@item.RazaoSocial</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>@FormatarCnpj(item.Cnpj)</td>
+                            <td>
+                                <div class="inst-local">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.3-6-10a6 6 0 1 1 12 0c0 4.7-6 10-6 10z" /><circle cx="12" cy="11" r="2" /></svg>
+                                    @item.Cidade, @item.Estado
+                                </div>
+                            </td>
+                            <td>
+                                <div>@item.Email</div>
+                                <div class="inst-secundario">@item.Telefone</div>
+                            </td>
+                            <td class="inst-acoes">
+                                <a asp-action="Edit" asp-route-id="@item.Id" class="inst-acao">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4L19 9l-4-4L4 16z" /></svg>
+                                    Editar
+                                </a>
+                                <a asp-action="Details" asp-route-id="@item.Id" class="inst-acao">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z" /><circle cx="12" cy="12" r="3" /></svg>
+                                    Detalhes
+                                </a>
+                                <a asp-action="Delete" asp-route-id="@item.Id" class="inst-acao">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16" /><path d="M9 7V4h6v3" /><path d="M6 7l1 13h10l1-13" /><path d="M10 11v6M14 11v6" /></svg>
+                                    Excluir
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <div class="inst-aviso">
+            As ações nesta página são administrativas. Exclusões são irreversíveis e exigem confirmação.
+        </div>
+    </div>
+</div>
