@@ -4,44 +4,68 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<div class="container">
 
-<p>
-    <a asp-action="InserirDoador">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Telefone)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nome)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(model => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(model => item.Telefone)
-            </td>
-            <td>
-                @Html.DisplayFor(model => item.Nome)
-            </td>
-            <td>
-                <a asp-action="AlterarDoador" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="RemoverDoador" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <h1>Index</h1>
+
+    <p>
+        <a asp-action="InserirDoador">Create New</a>
+    </p>
+
+    <div class="table-responsive">
+
+        <table class="table">
+
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Email)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.Telefone)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.Nome)
+                    </th>
+
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Telefone)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nome)
+                        </td>
+
+                        <td>
+                            <a asp-action="AlterarDoador"
+                               asp-route-id="@item.Id">Edit</a> |
+
+                            <a asp-action="Details"
+                               asp-route-id="@item.Id">Details</a> |
+
+                            <a asp-action="RemoverDoador"
+                               asp-route-id="@item.Id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
