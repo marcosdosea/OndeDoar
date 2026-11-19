@@ -1,87 +1,122 @@
 ﻿@model OndeDoarWeb.Models.InstituicaoViewModel
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Nova instituição";
 }
 
-<h1>Create</h1>
+<link rel="stylesheet" href="~/css/instituicao.css" asp-append-version="true" />
 
-<h4>InstituicaoViewModel</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<div class="cad-pagina">
+    <h1 class="cad-titulo">Crie o perfil da sua instituição</h1>
+    <p class="cad-subtitulo">Ajude os doadores a conhecerem seu trabalho e encontre apoio para suas necessidades.</p>
 
-            <div class="form-group">
-                <label asp-for="NomeFantasia" class="control-label"></label>
-                <input asp-for="NomeFantasia" class="form-control" />
-                <span asp-validation-for="NomeFantasia" class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <label asp-for="RazaoSocial" class="control-label"></label>
-                <input asp-for="RazaoSocial" class="form-control" />
-                <span asp-validation-for="RazaoSocial" class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <label asp-for="Cnpj" class="control-label"></label>
-                <input asp-for="Cnpj" class="form-control" />
-                <span asp-validation-for="Cnpj" class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <label asp-for="Cep" class="control-label"></label>
-                <input asp-for="Cep" class="form-control" />
-                <span asp-validation-for="Cep" class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <label asp-for="Cidade" class="control-label"></label>
-                <input asp-for="Cidade" class="form-control" />
-                <span asp-validation-for="Cidade" class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <label asp-for="Estado" class="control-label"></label>
-                <input asp-for="Estado" class="form-control" />
-                <span asp-validation-for="Estado" class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <label asp-for="Telefone" class="control-label"></label>
-                <input asp-for="Telefone" class="form-control" />
-                <span asp-validation-for="Telefone" class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <label asp-for="HoraAbertura" class="control-label"></label>
-                <input type="time" asp-for="HoraAbertura" class="form-control" />
-                <span asp-validation-for="HoraAbertura" class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <label asp-for="HoraFechamento" class="control-label"></label>
-                <input type="time" asp-for="HoraFechamento" class="form-control" />
-                <span asp-validation-for="HoraFechamento" class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+    <div class="cad-passos">
+        <div class="cad-passo ativo"><span class="cad-passo-num">1</span> Dados da instituição</div>
+        <div class="cad-passo"><span class="cad-passo-num">2</span> Verificação</div>
+        <div class="cad-passo"><span class="cad-passo-num">3</span> Perfil público</div>
     </div>
-</div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
+    <form asp-action="Create">
+        <div class="cad-cartao">
+            <div>
+                <h2 class="cad-secao">Dados básicos</h2>
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="cad-grade-2">
+                    <div class="cad-campo">
+                        <label asp-for="Cnpj"></label>
+                        <input asp-for="Cnpj" class="form-control" placeholder="Somente números" maxlength="14" />
+                        <span asp-validation-for="Cnpj" class="text-danger"></span>
+                    </div>
+                    <div class="cad-dica">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6z" /><path d="M12 9v6M9 12h6" /></svg>
+                        <span>O CNPJ identifica a instituição. Informe os 14 números, sem pontos, barra ou traço.</span>
+                    </div>
+                </div>
+
+                <div class="cad-campo">
+                    <label asp-for="RazaoSocial"></label>
+                    <input asp-for="RazaoSocial" class="form-control" />
+                    <span asp-validation-for="RazaoSocial" class="text-danger"></span>
+                </div>
+
+                <div class="cad-campo">
+                    <label asp-for="NomeFantasia"></label>
+                    <input asp-for="NomeFantasia" class="form-control" />
+                    <span asp-validation-for="NomeFantasia" class="text-danger"></span>
+                </div>
+
+                <div class="cad-campo">
+                    <label asp-for="Email"></label>
+                    <input asp-for="Email" class="form-control" placeholder="contato@instituicao.org.br" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <div class="cad-grade-2">
+                    <div class="cad-campo">
+                        <label asp-for="Telefone"></label>
+                        <input asp-for="Telefone" class="form-control" placeholder="79999999999" maxlength="11" />
+                        <span asp-validation-for="Telefone" class="text-danger"></span>
+                    </div>
+                    <div class="cad-campo">
+                        <label asp-for="Cep"></label>
+                        <input asp-for="Cep" class="form-control" placeholder="00000-000" maxlength="9" />
+                        <span asp-validation-for="Cep" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="cad-grade-2">
+                    <div class="cad-campo">
+                        <label asp-for="Cidade"></label>
+                        <input asp-for="Cidade" class="form-control" placeholder="Ex.: Aracaju" />
+                        <span asp-validation-for="Cidade" class="text-danger"></span>
+                    </div>
+                    <div class="cad-campo">
+                        <label asp-for="Estado"></label>
+                        <input asp-for="Estado" class="form-control" placeholder="SE" maxlength="2" />
+                        <span asp-validation-for="Estado" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="cad-grade-2">
+                    <div class="cad-campo">
+                        <label asp-for="HoraAbertura"></label>
+                        <input asp-for="HoraAbertura" type="time" class="form-control" />
+                        <span asp-validation-for="HoraAbertura" class="text-danger"></span>
+                    </div>
+                    <div class="cad-campo">
+                        <label asp-for="HoraFechamento"></label>
+                        <input asp-for="HoraFechamento" type="time" class="form-control" />
+                        <span asp-validation-for="HoraFechamento" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <aside>
+                <div class="cad-lateral">
+                    <div class="cad-lateral-titulo">Antes de cadastrar</div>
+                    <div class="cad-lateral-item">
+                        <span class="cad-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10" /></svg></span>
+                        <span>Confira o CNPJ e a razão social: eles identificam a organização.</span>
+                    </div>
+                    <div class="cad-lateral-item">
+                        <span class="cad-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10" /></svg></span>
+                        <span>O e-mail não pode ser usado por outra instituição.</span>
+                    </div>
+                </div>
+
+                <label class="cad-declaracao">
+                    <input type="checkbox" required />
+                    <span>Declaro que as informações são verdadeiras e autorizo a verificação dos dados da instituição.</span>
+                </label>
+
+                <input type="submit" value="Cadastrar instituição" class="inst-btn inst-btn-primario inst-btn-bloco" />
+                <a asp-action="Index" class="inst-btn inst-btn-contorno inst-btn-bloco">Voltar</a>
+            </aside>
+        </div>
+    </form>
+
+    <p class="cad-rodape">Os dados poderão ser editados depois, na lista de instituições.</p>
 </div>
 
 @section Scripts {

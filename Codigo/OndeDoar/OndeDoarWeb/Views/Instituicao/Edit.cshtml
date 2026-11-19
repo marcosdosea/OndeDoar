@@ -1,88 +1,87 @@
 ﻿@model OndeDoarWeb.Models.InstituicaoViewModel
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Editar instituição";
 }
 
-<h1>Edit</h1>
+<link rel="stylesheet" href="~/css/instituicao.css" asp-append-version="true" />
 
-<h4>InstituicaoViewModel</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" />
+<div class="inst-cartao">
+    <h1 class="inst-titulo">Editar instituição</h1>
+    <p class="inst-subtitulo">Mantenha os dados atualizados.</p>
 
-            <div class="form-group">
-                <label asp-for="NomeFantasia" class="control-label"></label>
-                <input asp-for="NomeFantasia" class="form-control" />
-                <span asp-validation-for="NomeFantasia" class="text-danger"></span>
-            </div>
+    <form asp-action="Edit">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="Id" />
 
-            <div class="form-group">
-                <label asp-for="RazaoSocial" class="control-label"></label>
-                <input asp-for="RazaoSocial" class="form-control" />
-                <span asp-validation-for="RazaoSocial" class="text-danger"></span>
-            </div>
+        <div class="cad-campo">
+            <label asp-for="NomeFantasia"></label>
+            <input asp-for="NomeFantasia" class="form-control" />
+            <span asp-validation-for="NomeFantasia" class="text-danger"></span>
+        </div>
 
-            <div class="form-group">
-                <label asp-for="Cnpj" class="control-label"></label>
-                <input asp-for="Cnpj" class="form-control" />
+        <div class="cad-campo">
+            <label asp-for="RazaoSocial"></label>
+            <input asp-for="RazaoSocial" class="form-control" />
+            <span asp-validation-for="RazaoSocial" class="text-danger"></span>
+        </div>
+
+        <div class="cad-grade-2">
+            <div class="cad-campo">
+                <label asp-for="Cnpj"></label>
+                <input asp-for="Cnpj" class="form-control" maxlength="14" />
                 <span asp-validation-for="Cnpj" class="text-danger"></span>
             </div>
-
-            <div class="form-group">
-                <label asp-for="Cep" class="control-label"></label>
-                <input asp-for="Cep" class="form-control" />
+            <div class="cad-campo">
+                <label asp-for="Cep"></label>
+                <input asp-for="Cep" class="form-control" maxlength="9" />
                 <span asp-validation-for="Cep" class="text-danger"></span>
             </div>
+        </div>
 
-            <div class="form-group">
-                <label asp-for="Cidade" class="control-label"></label>
+        <div class="cad-grade-2">
+            <div class="cad-campo">
+                <label asp-for="Cidade"></label>
                 <input asp-for="Cidade" class="form-control" />
                 <span asp-validation-for="Cidade" class="text-danger"></span>
             </div>
-
-            <div class="form-group">
-                <label asp-for="Estado" class="control-label"></label>
-                <input asp-for="Estado" class="form-control" />
+            <div class="cad-campo">
+                <label asp-for="Estado"></label>
+                <input asp-for="Estado" class="form-control" maxlength="2" />
                 <span asp-validation-for="Estado" class="text-danger"></span>
             </div>
+        </div>
 
-            <div class="form-group">
-                <label asp-for="Telefone" class="control-label"></label>
-                <input asp-for="Telefone" class="form-control" />
-                <span asp-validation-for="Telefone" class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
+        <div class="cad-grade-2">
+            <div class="cad-campo">
+                <label asp-for="Email"></label>
                 <input asp-for="Email" class="form-control" />
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
+            <div class="cad-campo">
+                <label asp-for="Telefone"></label>
+                <input asp-for="Telefone" class="form-control" maxlength="11" />
+                <span asp-validation-for="Telefone" class="text-danger"></span>
+            </div>
+        </div>
 
-            <div class="form-group">
-                <label asp-for="HoraAbertura" class="control-label"></label>
-                <input type="time" asp-for="HoraAbertura" class="form-control" />
+        <div class="cad-grade-2">
+            <div class="cad-campo">
+                <label asp-for="HoraAbertura"></label>
+                <input asp-for="HoraAbertura" type="time" class="form-control" />
                 <span asp-validation-for="HoraAbertura" class="text-danger"></span>
             </div>
-
-            <div class="form-group">
-                <label asp-for="HoraFechamento" class="control-label"></label>
-                <input type="time" asp-for="HoraFechamento" class="form-control" />
+            <div class="cad-campo">
+                <label asp-for="HoraFechamento"></label>
+                <input asp-for="HoraFechamento" type="time" class="form-control" />
                 <span asp-validation-for="HoraFechamento" class="text-danger"></span>
             </div>
+        </div>
 
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
+        <input type="submit" value="Salvar alterações" class="inst-btn inst-btn-primario inst-btn-bloco" />
+        <a asp-action="Index" class="inst-btn inst-btn-contorno inst-btn-bloco">Cancelar</a>
+        <a asp-action="Delete" asp-route-id="@Model.Id" class="inst-btn inst-btn-perigo inst-btn-bloco">Excluir instituição</a>
+    </form>
 </div>
 
 @section Scripts {

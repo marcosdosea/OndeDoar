@@ -29,9 +29,6 @@ public partial class OndeDoarContext : DbContext
 
     public virtual DbSet<Postagem> Postagems { get; set; }
 
-
-
-
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Instituicao>(entity =>
@@ -61,10 +58,16 @@ public partial class OndeDoarContext : DbContext
                 .HasColumnName("estado");
             entity.Property(e => e.HoraAbertura)
                 .HasColumnType("time")
-                .HasColumnName("horaAbertura");
+                .HasColumnName("horaAbertura")
+                .HasConversion(
+                    horario => horario.ToTimeSpan(),
+                    horario => TimeOnly.FromTimeSpan(horario));
             entity.Property(e => e.HoraFechamento)
                 .HasColumnType("time")
-                .HasColumnName("horaFechamento");
+                .HasColumnName("horaFechamento")
+                .HasConversion(
+                    horario => horario.ToTimeSpan(),
+                    horario => TimeOnly.FromTimeSpan(horario));
             entity.Property(e => e.NomeFantasia)
                 .HasMaxLength(50)
                 .HasColumnName("nomeFantasia");

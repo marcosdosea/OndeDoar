@@ -56,14 +56,62 @@ namespace OndeDoarWeb.Controllers
 
             try
             {
-                instituicaoService.Create(InstituicaoMapper.ToEntity(instituicaoViewModel));
-                return RedirectToAction(nameof(Index));
+                var id = instituicaoService.Create(InstituicaoMapper.ToEntity(instituicaoViewModel));
+                return RedirectToAction(nameof(Verificacao), new { id });
             }
             catch (ServiceException ex)
             {
                 ModelState.AddModelError(string.Empty, ex.Message);
                 return View(instituicaoViewModel);
             }
+        }
+
+        // GET: InstituicaoController/Verificacao/5
+        public ActionResult Verificacao(int id)
+        {
+            var instituicao = instituicaoService.Get(id);
+            if (instituicao == null)
+                return NotFound();
+
+            return View(new VerificacaoViewModel { IdInstituicao = id });
+        }
+
+        // POST: InstituicaoController/Verificacao
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Verificacao(VerificacaoViewModel verificacaoViewModel)
+        {
+            if (!ModelState.IsValid)
+                return View(verificacaoViewModel);
+
+            return RedirectToAction(nameof(PerfilPublico), new { id = verificacaoViewModel.IdInstituicao });
+        }
+
+        // GET: InstituicaoController/PerfilPublico/5
+        public ActionResult PerfilPublico(int id)
+        {
+            var instituicao = instituicaoService.Get(id);
+            if (instituicao == null)
+                return NotFound();
+
+            return View(new PerfilPublicoViewModel
+            {
+                IdInstituicao = id,
+                NomeExibido = instituicao.NomeFantasia,
+                Cidade = instituicao.Cidade,
+                Estado = instituicao.Estado
+            });
+        }
+
+        // POST: InstituicaoController/PerfilPublico
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult PerfilPublico(PerfilPublicoViewModel perfilPublicoViewModel)
+        {
+            if (!ModelState.IsValid)
+                return View(perfilPublicoViewModel);
+
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: InstituicaoController/Edit/5
