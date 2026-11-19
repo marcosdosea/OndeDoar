@@ -1,56 +1,108 @@
 ﻿@model OndeDoarWeb.Models.PostagemViewModel
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Editar Postagem";
 }
 
-<h1>Edit</h1>
+@section Styles {
+    <link rel="stylesheet" href="~/css/postagem-edit.css" asp-append-version="true" />
+}
 
-<h4>PostagemViewModel</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" />
+<div class="editar-postagem-page">
+    <div class="postagem-container">
+        <a asp-action="Index" class="voltar-link">
+            <span>&larr;</span> Voltar para Postagens
+        </a>
 
-            <div class="form-group">
-                <label asp-for="Titulo" class="control-label"></label>
-                <input asp-for="Titulo" class="form-control" />
-                <span asp-validation-for="Titulo" class="text-danger"></span>
+        <div class="editar-postagem-layout">
+            <!-- Coluna Principal: Formulário de Edição -->
+            <div>
+                <div class="editar-header-badge">Editando Postagem #@Model.Id</div>
+                <h1 class="postagem-titulo-principal">Editar Postagem</h1>
+                <p class="postagem-subtitulo">
+                    Atualize as informações da campanha ou corrija detalhes importantes para manter os doadores informados.
+                </p>
+
+                <form asp-action="Edit" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+                    <input type="hidden" asp-for="Id" />
+
+                    <div class="secao-form-card">
+                        <label asp-for="Titulo" class="secao-form-label">Título da Postagem</label>
+                        <input asp-for="Titulo" class="campo-controle" maxlength="50" placeholder="Ex: Campanha do Agasalho 2026" />
+                        <span asp-validation-for="Titulo" class="text-danger"></span>
+                    </div>
+
+                    <div class="secao-form-card">
+                        <label asp-for="Descricao" class="secao-form-label">Descrição</label>
+                        <textarea asp-for="Descricao" id="campoDescricao" class="campo-controle" maxlength="250" placeholder="Descreva os detalhes da campanha, itens necessários, horários ou locais de entrega..."></textarea>
+                        <div class="contador-caracteres">
+                            <span id="contadorAtual">0</span> / 250 caracteres
+                        </div>
+                        <span asp-validation-for="Descricao" class="text-danger"></span>
+                    </div>
+
+                    <div class="secao-form-card">
+                        <div class="campos-duplos">
+                            <div>
+                                <label asp-for="Data" class="secao-form-label">Data de Publicação</label>
+                                <input asp-for="Data" type="date" class="campo-controle datepicker" />
+                                <span asp-validation-for="Data" class="text-danger"></span>
+                            </div>
+
+                            <div>
+                                <label asp-for="InstituicaoId" class="secao-form-label">ID da Instituição</label>
+                                <input asp-for="InstituicaoId" type="number" class="campo-controle" />
+                                <span asp-validation-for="InstituicaoId" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="acoes-formulario">
+                        <button type="submit" class="btn-salvar">Salvar Alterações</button>
+                        <a asp-action="Index" class="btn-cancelar">Cancelar</a>
+                    </div>
+                </form>
             </div>
 
-            <div class="form-group">
-                <label asp-for="Descricao" class="control-label"></label>
-                <input asp-for="Descricao" class="form-control" />
-                <span asp-validation-for="Descricao" class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <label asp-for="Data" class="control-label"></label>
-                <input type="date" asp-for="Data" class="form-control datepicker" />
-                <span asp-validation-for="Data" class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <label asp-for="InstituicaoId" class="control-label"></label>
-                <input asp-for="InstituicaoId" class="form-control" />
-                <span asp-validation-for="InstituicaoId" class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+            <!-- Coluna Lateral: Resumo / Contexto da Edição -->
+            <aside class="resumo-instituicao-card">
+                <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?auto=format&fit=crop&w=800&q=80"
+                     alt="Atualização de campanha"
+                     class="resumo-instituicao-foto" />
+                <div class="resumo-instituicao-corpo">
+                    <h3 class="resumo-instituicao-nome">Atualização de Dados</h3>
+                    <p class="resumo-instituicao-lema">
+                        As alterações feitas aqui refletem imediatamente na listagem pública de campanhas.
+                    </p>
+                    <p style="font-size: 0.88rem; color: var(--text-body); line-height: 1.5; margin: 0;">
+                        <strong>Atenção:</strong> Caso a campanha já tenha atingido a meta, atualize o título ou a descrição para avisar os doadores.
+                    </p>
+                    <div class="selo-verificada">
+                        <span>Instituição #@Model.InstituicaoId</span>
+                        <span>&#10003; Ativa</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const textarea = document.getElementById("campoDescricao");
+            const contador = document.getElementById("contadorAtual");
+
+            if (textarea && contador) {
+                contador.textContent = textarea.value.length;
+                textarea.addEventListener("input", function () {
+                    contador.textContent = this.value.length;
+                });
+            }
+        });
+    </script>
 }

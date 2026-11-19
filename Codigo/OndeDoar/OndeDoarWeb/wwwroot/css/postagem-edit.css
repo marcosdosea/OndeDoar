@@ -1,0 +1,238 @@
+﻿:root {
+    --bg-page: #faf6f0;
+    --bg-card: #fbf9f5;
+    --bg-field: #f4efe6;
+    --text-primary: #143d30;
+    --text-body: #2c3531;
+    --text-muted: #6b726e;
+    --accent-coral: #f26b4c;
+    --accent-coral-hover: #df5839;
+    --accent-green: #164236;
+    --accent-green-hover: #0f2f26;
+    --border-soft: #e4ddd0;
+    --radius-lg: 16px;
+    --radius-md: 12px;
+    --radius-sm: 10px;
+}
+
+html, body {
+    background-color: var(--bg-page);
+    min-height: 100vh;
+}
+
+.editar-postagem-page {
+    background-color: var(--bg-page);
+    color: var(--text-body);
+    font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+    min-height: calc(100vh - 120px);
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 24px 0 52px;
+}
+
+.postagem-container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.voltar-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+    .voltar-link:hover {
+        color: var(--text-primary);
+    }
+
+.editar-postagem-layout {
+    display: grid;
+    grid-template-columns: 1.45fr 0.85fr;
+    gap: 32px;
+    align-items: start;
+}
+
+.editar-header-badge {
+    display: inline-block;
+    background-color: #ebe5d8;
+    color: var(--text-primary);
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.postagem-titulo-principal {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 10px;
+}
+
+.postagem-subtitulo {
+    font-size: 0.98rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+.secao-form-card {
+    background-color: var(--bg-field);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-md);
+    padding: 20px 22px;
+    margin-bottom: 18px;
+}
+
+.secao-form-label {
+    display: block;
+    font-weight: 700;
+    color: var(--text-primary);
+    font-size: 0.98rem;
+    margin-bottom: 10px;
+}
+
+.campos-duplos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.campo-controle {
+    width: 100%;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+    font-size: 0.94rem;
+    color: var(--text-body);
+}
+
+    .campo-controle:focus {
+        outline: none;
+        border-color: var(--accent-green);
+    }
+
+textarea.campo-controle {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.contador-caracteres {
+    text-align: right;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 6px;
+}
+
+/* Botões principais */
+.acoes-formulario {
+    display: flex;
+    gap: 14px;
+    margin-top: 24px;
+}
+
+.btn-salvar {
+    flex: 1;
+    padding: 13px 22px;
+    border-radius: var(--radius-sm);
+    border: none;
+    background-color: var(--accent-green);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+    .btn-salvar:hover {
+        background-color: var(--accent-green-hover);
+    }
+
+.btn-cancelar {
+    flex: 1;
+    padding: 13px 22px;
+    border-radius: var(--radius-sm);
+    border: 1.5px solid var(--accent-green);
+    background-color: transparent;
+    color: var(--accent-green);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+    .btn-cancelar:hover {
+        background-color: var(--accent-green);
+        color: #ffffff;
+    }
+
+/* Card lateral */
+.resumo-instituicao-card {
+    background-color: var(--bg-field);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.resumo-instituicao-foto {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+}
+
+.resumo-instituicao-corpo {
+    padding: 20px;
+}
+
+.resumo-instituicao-nome {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 6px;
+}
+
+.resumo-instituicao-lema {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border-soft);
+}
+
+.selo-verificada {
+    margin-top: 14px;
+    background-color: #ebe5d8;
+    border-radius: var(--radius-sm);
+    padding: 10px 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width: 900px) {
+    .editar-postagem-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .campos-duplos {
+        grid-template-columns: 1fr;
+    }
+}

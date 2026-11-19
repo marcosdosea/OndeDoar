@@ -1,54 +1,61 @@
 ﻿@model IEnumerable<OndeDoarWeb.Models.PostagemViewModel>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Postagens e Campanhas";
 }
 
-<h1>Index</h1>
+@section Styles {
+    <link rel="stylesheet" href="~/css/postagem-index.css" asp-append-version="true" />
+}
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Titulo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Descricao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Data)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.InstituicaoId)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
+<div class="postagens-page">
+    <div class="postagem-container">
+        <div class="postagens-header">
+            <div>
+                <h1 class="postagem-titulo-principal">Campanhas e Postagens</h1>
+                <p class="postagem-subtitulo">
+                    Acompanhe as últimas atualizações, eventos e campanhas de arrecadação das instituições parceiras.
+                </p>
+            </div>
+            <div>
+                <a asp-action="Create" class="btn-publicar">+ Nova Postagem</a>
+            </div>
+        </div>
+
+        @if (!Model.Any())
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Titulo)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Descricao)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Data)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.InstituicaoId)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                </td>
-            </tr>
+            <div class="secao-form-card" style="text-align: center; padding: 40px 20px;">
+                <h4 class="postagem-card-titulo">Nenhuma postagem encontrada</h4>
+                <p class="postagem-subtitulo" style="margin-bottom: 18px;">
+                    Ainda não há campanhas publicadas no momento. Que tal criar a primeira?
+                </p>
+                <a asp-action="Create" class="btn-publicar" style="max-width: 240px;">Criar Postagem</a>
+            </div>
         }
-    </tbody>
-</table>
+        else
+        {
+            <div class="postagens-grid">
+                @foreach (var item in Model)
+                {
+                    <article class="postagem-card">
+                        <div>
+                            <div class="postagem-meta">
+                                <span class="postagem-badge-instituicao">Instituição #@item.InstituicaoId</span>
+                                <span>@item.Data.ToString("dd/MM/yyyy")</span>
+                            </div>
+
+                            <h2 class="postagem-card-titulo">@item.Titulo</h2>
+                            <p class="postagem-card-descricao">@item.Descricao</p>
+                        </div>
+
+                        <div class="postagem-card-acoes">
+                            <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a>
+                            <a asp-action="Edit" asp-route-id="@item.Id">Editar</a>
+                            <a asp-action="Delete" asp-route-id="@item.Id" class="acao-excluir">Excluir</a>
+                        </div>
+                    </article>
+                }
+            </div>
+        }
+    </div>
+</div>
