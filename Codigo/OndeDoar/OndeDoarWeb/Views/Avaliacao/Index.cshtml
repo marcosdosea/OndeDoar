@@ -1,60 +1,171 @@
 ﻿@model IEnumerable<OndeDoarWeb.Models.AvaliacaoViewModel>
+@using System.Globalization
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Avaliações da instituição";
+
+    var avaliacoes = Model?.ToList() ?? new List<OndeDoarWeb.Models.AvaliacaoViewModel>();
+    var totalAvaliacoes = avaliacoes.Count;
+    var mediaNota = totalAvaliacoes > 0 ? avaliacoes.Average(a => a.Nota) : 4.9f;
+
+    int ContarPorFaixa(int estrela) =>
+        avaliacoes.Count(a => Math.Round(a.Nota) == estrela);
+
+    int Percentual(int estrela) =>
+        totalAvaliacoes > 0 ? (int)Math.Round(ContarPorFaixa(estrela) * 100.0 / totalAvaliacoes) : 0;
+
+    string FormatarEstrelas(float nota)
+    {
+        int cheias = Math.Clamp((int)Math.Round(nota), 0, 5);
+        return new string('★', cheias) + new string('☆', 5 - cheias);
+    }
+
+    string GerarIniciais(int idDoador) => $"D{idDoador}";
 }
 
-<h1>Index</h1>
+@section Styles {
+    <link rel="stylesheet" href="~/css/avaliacao-index.css" asp-append-version="true" />
+}
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Nota)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Comentario)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Data)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IdInstituicao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IdDoador)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Nota)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Comentario)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Data)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.IdInstituicao)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.IdDoador)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+<div class="avaliacoes-page">
+    <div class="avaliacoes-container">
+        <!-- Breadcrumb -->
+        <nav class="avaliacoes-breadcrumb" aria-label="Breadcrumb">
+            <a asp-controller="Home" asp-action="Index">Início</a>
+            <span>&rsaquo;</span>
+            <span>Instituições</span>
+            <span>&rsaquo;</span>
+            <span>Avaliações</span>
+        </nav>
+
+        <div class="avaliacoes-layout">
+            <!-- Coluna Esquerda: Card / Sidebar da Instituição -->
+            <aside class="instituicao-sidebar">
+                <div class="instituicao-logo" aria-hidden="true">
+                    <span class="instituicao-simbolo">♥</span>
+                </div>
+
+                <h2 class="instituicao-nome">Instituição</h2>
+                <div class="instituicao-local">
+                    <span>&#128205;</span>
+                    <span>OndeDoar</span>
+                </div>
+
+                <div class="media-geral-valor">@mediaNota.ToString("0.0", new CultureInfo("pt-BR"))</div>
+                <div class="estrelas-linha" aria-label="Média de estrelas">@FormatarEstrelas(mediaNota)</div>
+                <div class="total-avaliacoes-texto">@totalAvaliacoes @(totalAvaliacoes == 1 ? "avaliação" : "avaliações")</div>
+
+                <a asp-controller="Avaliacao" asp-action="Create" class="btn-outline-avaliar">
+                    <span>&#9734;</span>
+                    <span>Avaliar instituição</span>
+                </a>
+            </aside>
+
+            <!-- Coluna Direita: Título, Resumo, CTA e Lista -->
+            <section class="avaliacoes-conteudo">
+                <h1 class="avaliacoes-header-titulo">Avaliações da instituição</h1>
+                <p class="avaliacoes-subtitulo">Experiências compartilhadas pela comunidade</p>
+
+                <!-- Linha superior: "O que as pessoas dizem" + Card CTA -->
+                <div class="resumo-grid">
+                    <div class="card-painel">
+                        <h2 class="painel-titulo">O que as pessoas dizem</h2>
+
+                        @for (int estrela = 5; estrela >= 1; estrela--)
+                        {
+                            var pct = Percentual(estrela);
+                            <div class="barra-estrela-item">
+                                <span class="barra-rotulo">@estrela <span class="estrela-mini">★</span></span>
+                                <div class="barra-trilho">
+                                    <div class="barra-preenchimento" style="width: @pct%;"></div>
+                                </div>
+                                <span class="barra-pct">@pct%</span>
+                            </div>
+                        }
+
+                        <div class="filtros-linha">
+                            <select class="filtro-select" aria-label="Filtrar avaliações">
+                                <option selected>Todas as avaliações</option>
+                                <option>5 estrelas</option>
+                                <option>4 estrelas</option>
+                                <option>3 estrelas</option>
+                                <option>2 estrelas</option>
+                                <option>1 estrela</option>
+                            </select>
+
+                            <select class="filtro-select" aria-label="Ordenar avaliações">
+                                <option selected>Mais recentes</option>
+                                <option>Maior nota</option>
+                                <option>Menor nota</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="card-painel card-painel--cta">
+                        <div class="cta-icone" aria-hidden="true">&#9825;</div>
+                        <h2 class="painel-titulo">Sua experiência pode ajudar</h2>
+                        <p class="cta-descricao">
+                            Compartilhe como foi sua experiência com esta instituição.
+                        </p>
+                        <a asp-controller="Avaliacao" asp-action="Create" class="btn-escrever-avaliacao">
+                            <span>&#9998;</span>
+                            <span>Escrever uma avaliação</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Lista de Avaliações -->
+                <div class="lista-avaliacoes">
+                    @if (!avaliacoes.Any())
+                    {
+                        <div class="avaliacao-item">
+                            <div class="avatar-iniciais">OD</div>
+                            <div>
+                                <div class="avaliacao-autor">Nenhuma avaliação cadastrada ainda</div>
+                                <p class="avaliacao-comentario">
+                                    Clique em <strong>Escrever uma avaliação</strong> para registrar a primeira experiência.
+                                </p>
+                            </div>
+                            <div class="avaliacao-meta"></div>
+                        </div>
+                    }
+                    else
+                    {
+                        @foreach (var item in avaliacoes)
+                        {
+                            <article class="avaliacao-item">
+                                <div class="avatar-iniciais">@GerarIniciais(item.IdDoador)</div>
+
+                                <div>
+                                    <div class="avaliacao-autor">Doador #@item.IdDoador &middot; Instituição #@item.IdInstituicao</div>
+                                    <div class="avaliacao-estrelas">@FormatarEstrelas(item.Nota) (@item.Nota.ToString("0.0", new CultureInfo("pt-BR")))</div>
+                                    <p class="avaliacao-comentario">
+                                        @(string.IsNullOrWhiteSpace(item.Comentario) ? "Sem comentário adicional." : item.Comentario)
+                                    </p>
+                                </div>
+
+                                <div class="avaliacao-meta">
+                                    <div>&#128197; @item.Data.ToString("dd/MM/yyyy")</div>
+                                    <div class="avaliacao-acoes">
+                                        <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a>
+                                        <a asp-action="Edit" asp-route-id="@item.Id">Editar</a>
+                                        <a asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
+                                    </div>
+                                </div>
+                            </article>
+                        }
+                    }
+                </div>
+            </section>
+        </div>
+
+        <!-- Faixa informativa inferior -->
+        <div class="aviso-rodape">
+            <span class="aviso-icone" aria-hidden="true">i</span>
+            <div>
+                <div>As avaliações devem refletir uma experiência real de doação ou contato com a instituição.</div>
+                <strong>Visualização integrada com o cadastro de avaliações do sistema.</strong>
+            </div>
+        </div>
+    </div>
+</div>

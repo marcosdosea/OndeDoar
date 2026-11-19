@@ -1,61 +1,143 @@
 ﻿@model OndeDoarWeb.Models.AvaliacaoViewModel
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Compartilhe sua experiência";
 }
 
-<h1>Create</h1>
+@section Styles {
+    <link rel="stylesheet" href="~/css/avaliacao-create.css" asp-append-version="true" />
+}
 
-<h4>AvaliacaoViewModel</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<div class="criar-avaliacao-page">
+    <div class="criar-avaliacao-container">
+        <a asp-action="Index" class="voltar-link">
+            <span>&larr;</span>
+            <span>Voltar para Avaliações</span>
+        </a>
 
-            <div class="form-group">
-                <label asp-for="Nota" class="control-label"></label>
-                <input asp-for="Nota" class="form-control" />
-                <span asp-validation-for="Nota" class="text-danger"></span>
-            </div>
+        <div class="criar-avaliacao-layout">
+            <!-- Coluna Esquerda: Formulário -->
+            <section>
+                <h1 class="criar-titulo">Compartilhe sua experiência</h1>
+                <p class="criar-descricao">
+                    Sua opinião é muito importante para outras pessoas que desejam conhecer melhor o trabalho da instituição.
+                </p>
 
-            <div class="form-group">
-                <label asp-for="Comentario" class="control-label"></label>
-                <input asp-for="Comentario" class="form-control" />
-                <span asp-validation-for="Comentario" class="text-danger"></span>
-            </div>
+                <form asp-action="Create" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
 
-            <div class="form-group">
-                <label asp-for="Data" class="control-label"></label>
-                <input asp-for="Data" class="form-control" />
-                <span asp-validation-for="Data" class="text-danger"></span>
-            </div>
+                    <!-- Nota (Estrelas interativas + campo ligado ao ViewModel) -->
+                    <div class="secao-form-card">
+                        <label asp-for="Nota" class="secao-form-label">Sua avaliação</label>
 
-            <div class="form-group">
-                <label asp-for="IdInstituicao" class="control-label"></label>
-                <input asp-for="IdInstituicao" class="form-control" />
-                <span asp-validation-for="IdInstituicao" class="text-danger"></span>
-            </div>
+                        <input asp-for="Nota" id="NotaInput" type="hidden" />
 
-            <div class="form-group">
-                <label asp-for="IdDoador" class="control-label"></label>
-                <input asp-for="IdDoador" class="form-control" />
-                <span asp-validation-for="IdDoador" class="text-danger"></span>
-            </div>
+                        <div class="estrelas-seletor" id="estrelasSeletor" role="group" aria-label="Selecionar nota de 1 a 5 estrelas">
+                            <span data-valor="1" title="1 estrela">&#9734;</span>
+                            <span data-valor="2" title="2 estrelas">&#9734;</span>
+                            <span data-valor="3" title="3 estrelas">&#9734;</span>
+                            <span data-valor="4" title="4 estrelas">&#9734;</span>
+                            <span data-valor="5" title="5 estrelas">&#9734;</span>
+                        </div>
 
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+                        <span asp-validation-for="Nota" class="text-danger"></span>
+                    </div>
+
+                    <!-- Comentário -->
+                    <div class="secao-form-card">
+                        <label asp-for="Comentario" class="secao-form-label">Como foi sua experiência com a instituição?</label>
+                        <textarea asp-for="Comentario" id="ComentarioTextarea" maxlength="1000" class="campo-controle"
+                                  placeholder="Conte como foi sua experiência, o que mais te marcou, o que poderia ser melhor..."></textarea>
+                        <div class="contador-caracteres"><span id="contadorChars">0</span>/1000</div>
+                        <span asp-validation-for="Comentario" class="text-danger"></span>
+                    </div>
+
+                    <!-- Data, Instituição e Doador -->
+                    <div class="secao-form-card">
+
+                        <div class="mb-3">
+                            <label asp-for="IdInstituicao" class="secao-form-label"></label>
+                            <input asp-for="IdInstituicao" type="number" class="campo-controle" />
+                            <span asp-validation-for="IdInstituicao" class="text-danger"></span>
+                        </div>
+
+                        <div>
+                            <label asp-for="IdDoador" class="secao-form-label"></label>
+                            <input asp-for="IdDoador" type="number" class="campo-controle" />
+                            <span asp-validation-for="IdDoador" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="acoes-formulario">
+                        <button type="submit" id="btnPublicar" class="btn-publicar ativo">Publicar avaliação</button>
+                        <a asp-action="Index" class="btn-cancelar">Cancelar</a>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Coluna Direita: Resumo da Instituição -->
+            <aside class="resumo-instituicao-card">
+                <div class="resumo-instituicao-corpo">
+                    <h2 class="resumo-instituicao-nome">Instituição</h2>
+                    <div class="resumo-instituicao-lema">
+                        Compartilhe uma avaliação justa e construtiva para apoiar novos doadores.
+                    </div>
+
+                    <div>
+                        <strong>Localização</strong>
+                        <div class="text-muted small">OndeDoar</div>
+                    </div>
+
+                    <div class="selo-verificada">
+                        <span>&#10003; Instituição cadastrada no sistema</span>
+                        <span>i</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
+    <script>
+        (function () {
+            const estrelas = document.querySelectorAll("#estrelasSeletor span");
+            const notaInput = document.getElementById("NotaInput");
+            const comentario = document.getElementById("ComentarioTextarea");
+            const contador = document.getElementById("contadorChars");
+
+            function pintarEstrelas(valor) {
+                const num = Math.round(parseFloat(valor) || 0);
+                estrelas.forEach(el => {
+                    const v = parseInt(el.dataset.valor, 10);
+                    el.innerHTML = v <= num ? "&#9733;" : "&#9734;";
+                });
+            }
+
+            estrelas.forEach(el => {
+                el.addEventListener("click", function () {
+                    const valor = this.dataset.valor;
+                    notaInput.value = valor;
+                    pintarEstrelas(valor);
+                });
+            });
+
+            notaInput.addEventListener("input", function () {
+                pintarEstrelas(this.value);
+            });
+
+            if (comentario && contador) {
+                const atualizarContador = () => {
+                    contador.textContent = comentario.value.length;
+                };
+                comentario.addEventListener("input", atualizarContador);
+                atualizarContador();
+            }
+
+            pintarEstrelas(notaInput.value);
+        })();
+    </script>
 }

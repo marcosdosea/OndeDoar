@@ -1,0 +1,254 @@
+﻿html, body {
+    background-color: #faf6f0;
+    min-height: 100vh;
+}
+
+.avaliacoes-page,
+.criar-avaliacao-page {
+    background-color: var(--bg-page);
+    min-height: calc(100vh - 120px);
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+}
+:root {
+    --bg-page: #faf6f0;
+    --bg-card: #fbf9f5;
+    --bg-field: #f4efe6;
+    --text-primary: #143d30;
+    --text-body: #2c3531;
+    --text-muted: #6b726e;
+    --accent-coral: #f26b4c;
+    --accent-coral-hover: #df5839;
+    --accent-green: #164236;
+    --star-coral: #f27a54;
+    --border-soft: #e4ddd0;
+    --radius-lg: 16px;
+    --radius-md: 12px;
+    --radius-sm: 10px;
+}
+
+.criar-avaliacao-page {
+    background-color: var(--bg-page);
+    color: var(--text-body);
+    font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+    padding: 24px 0 52px;
+}
+
+.criar-avaliacao-container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.voltar-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+    .voltar-link:hover {
+        color: var(--text-primary);
+    }
+
+.criar-avaliacao-layout {
+    display: grid;
+    grid-template-columns: 1.45fr 0.85fr;
+    gap: 32px;
+    align-items: start;
+}
+
+.criar-titulo {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 10px;
+}
+
+.criar-descricao {
+    font-size: 0.98rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+.secao-form-card {
+    background-color: var(--bg-field);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-md);
+    padding: 20px 22px;
+    margin-bottom: 18px;
+}
+
+.secao-form-label {
+    display: block;
+    font-weight: 700;
+    color: var(--text-primary);
+    font-size: 0.98rem;
+    margin-bottom: 10px;
+}
+
+/* Seleção de estrelas */
+.estrelas-seletor {
+    display: flex;
+    gap: 8px;
+    font-size: 1.85rem;
+    color: var(--star-coral);
+    cursor: pointer;
+    user-select: none;
+}
+
+.campo-controle {
+    width: 100%;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+    font-size: 0.94rem;
+    color: var(--text-body);
+}
+
+    .campo-controle:focus {
+        outline: none;
+        border-color: var(--accent-green);
+    }
+
+textarea.campo-controle {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contador-caracteres {
+    text-align: right;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 6px;
+}
+
+.checkbox-anonimo {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+    .checkbox-anonimo input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+        margin-top: 2px;
+        accent-color: var(--accent-green);
+    }
+
+    .checkbox-anonimo small {
+        display: block;
+        color: var(--text-muted);
+        font-size: 0.82rem;
+    }
+
+/* Botões principais */
+.acoes-formulario {
+    display: flex;
+    gap: 14px;
+    margin-top: 24px;
+}
+
+.btn-publicar {
+    flex: 1;
+    padding: 13px 22px;
+    border-radius: var(--radius-sm);
+    border: none;
+    background-color: #f4977e;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+    .btn-publicar:hover,
+    .btn-publicar.ativo {
+        background-color: var(--accent-coral);
+    }
+
+        .btn-publicar.ativo:hover {
+            background-color: var(--accent-coral-hover);
+        }
+
+.btn-cancelar {
+    flex: 1;
+    padding: 13px 22px;
+    border-radius: var(--radius-sm);
+    border: 1.5px solid var(--accent-green);
+    background-color: transparent;
+    color: var(--accent-green);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+    .btn-cancelar:hover {
+        background-color: var(--accent-green);
+        color: #ffffff;
+    }
+
+/* Card lateral da instituição */
+.resumo-instituicao-card {
+    background-color: var(--bg-field);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.resumo-instituicao-foto {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+}
+
+.resumo-instituicao-corpo {
+    padding: 20px;
+}
+
+.resumo-instituicao-nome {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 6px;
+}
+
+.resumo-instituicao-lema {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border-soft);
+}
+
+.selo-verificada {
+    margin-top: 14px;
+    background-color: #ebe5d8;
+    border-radius: var(--radius-sm);
+    padding: 10px 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width: 900px) {
+    .criar-avaliacao-layout {
+        grid-template-columns: 1fr;
+    }
+}
