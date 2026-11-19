@@ -139,12 +139,12 @@ public class InstituicaoControllerTests
     }
 
     [TestMethod]
-    public void Create_Post_QuandoValido_DeveChamarServiceERedirecionarParaIndex()
+    public void Create_Post_QuandoValido_DeveChamarServiceERedirecionarParaVerificacao()
     {
         var resultado = controller.Create(CriarViewModel());
 
         var redirect = Assert.IsInstanceOfType<RedirectToActionResult>(resultado);
-        Assert.AreEqual("Index", redirect.ActionName);
+        Assert.AreEqual("Verificacao", redirect.ActionName);
         instituicaoServiceMock.Verify(service => service.Create(It.IsAny<Instituicao>()), Times.Once);
     }
 

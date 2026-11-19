@@ -1,0 +1,99 @@
+﻿@model OndeDoarWeb.Models.VerificacaoViewModel
+
+@{
+    ViewData["Title"] = "Verificação";
+}
+
+<link rel="stylesheet" href="~/css/instituicao.css" asp-append-version="true" />
+
+<div class="cad-pagina">
+    <h1 class="cad-titulo">Verifique sua instituição</h1>
+    <p class="cad-subtitulo">Precisamos confirmar quem representa a organização antes de publicar o perfil e liberar o recebimento de doações.</p>
+
+    <div class="cad-passos">
+        <div class="cad-passo feito"><span class="cad-passo-num">&#10003;</span> Dados da instituição</div>
+        <div class="cad-passo ativo"><span class="cad-passo-num">2</span> Verificação</div>
+        <div class="cad-passo"><span class="cad-passo-num">3</span> Perfil público</div>
+    </div>
+
+    <form asp-action="Verificacao" method="post" enctype="multipart/form-data">
+        <input type="hidden" asp-for="IdInstituicao" />
+
+        <div class="cad-cartao">
+            <div>
+                <h2 class="cad-secao">Responsável pela instituição</h2>
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="cad-campo">
+                    <label asp-for="NomeResponsavel"></label>
+                    <input asp-for="NomeResponsavel" class="form-control" placeholder="Ex.: Maria Silva Santos" />
+                    <span asp-validation-for="NomeResponsavel" class="text-danger"></span>
+                </div>
+
+                <div class="cad-grade-2">
+                    <div class="cad-campo">
+                        <label asp-for="Cpf"></label>
+                        <input asp-for="Cpf" class="form-control" placeholder="Somente números" maxlength="11" />
+                        <span asp-validation-for="Cpf" class="text-danger"></span>
+                    </div>
+                    <div class="cad-campo">
+                        <label asp-for="Cargo"></label>
+                        <input asp-for="Cargo" class="form-control" placeholder="Ex.: Presidente" />
+                        <span asp-validation-for="Cargo" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="cad-campo">
+                    <label asp-for="EmailResponsavel"></label>
+                    <input asp-for="EmailResponsavel" class="form-control" placeholder="exemplo@instituicao.org.br" />
+                    <span asp-validation-for="EmailResponsavel" class="text-danger"></span>
+                </div>
+
+                <h2 class="cad-secao" style="margin-top:1.5rem">Documentos para verificação</h2>
+                <div class="cad-upload-grade">
+                    <div class="cad-upload">
+                        <div class="cad-upload-titulo">Comprovante de representação</div>
+                        <label class="cad-upload-area">
+                            <span class="cad-upload-icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V8M8.5 11.5L12 8l3.5 3.5" /><path d="M7 18a4 4 0 0 1-.5-7.9A5.5 5.5 0 0 1 17 9a4 4 0 0 1 0 9z" /></svg></span>
+                            Clique para enviar um arquivo
+                            <small>PDF, JPG ou PNG — até 5 MB</small>
+                            <input type="file" name="comprovante" accept=".pdf,.jpg,.jpeg,.png" />
+                        </label>
+                    </div>
+                    <div class="cad-upload">
+                        <div class="cad-upload-titulo">Documento da instituição</div>
+                        <label class="cad-upload-area">
+                            <span class="cad-upload-icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V8M8.5 11.5L12 8l3.5 3.5" /><path d="M7 18a4 4 0 0 1-.5-7.9A5.5 5.5 0 0 1 17 9a4 4 0 0 1 0 9z" /></svg></span>
+                            Clique para enviar um arquivo
+                            <small>PDF, JPG ou PNG — até 5 MB</small>
+                            <input type="file" name="documentoInstituicao" accept=".pdf,.jpg,.jpeg,.png" />
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <aside>
+                <div class="cad-lateral">
+                    <div class="cad-lateral-titulo">Seus dados serão usados apenas para verificar a instituição e manter a plataforma segura.</div>
+                </div>
+
+                <label class="cad-declaracao">
+                    <input type="checkbox" asp-for="Confirmo" required />
+                    <span>Confirmo que sou responsável ou representante autorizado da instituição.</span>
+                </label>
+                <span asp-validation-for="Confirmo" class="text-danger"></span>
+
+                <a asp-action="Create" class="inst-btn inst-btn-contorno inst-btn-bloco">Voltar</a>
+                <input type="submit" value="Continuar para o perfil público" class="inst-btn inst-btn-primario inst-btn-bloco" />
+            </aside>
+        </div>
+    </form>
+
+    <p class="cad-rodape">A análise pode ser concluída antes da publicação do perfil.</p>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

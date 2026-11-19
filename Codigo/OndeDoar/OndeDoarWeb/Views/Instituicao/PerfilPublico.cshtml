@@ -1,0 +1,104 @@
+﻿@model OndeDoarWeb.Models.PerfilPublicoViewModel
+
+@{
+    ViewData["Title"] = "Perfil público";
+}
+
+<link rel="stylesheet" href="~/css/instituicao.css" asp-append-version="true" />
+
+<div class="cad-pagina">
+    <h1 class="cad-titulo">Apresente sua instituição</h1>
+    <p class="cad-subtitulo">Essas informações formarão o perfil público que os doadores verão no OndeDoar.</p>
+
+    <div class="cad-passos">
+        <div class="cad-passo feito"><span class="cad-passo-num">&#10003;</span> Dados da instituição</div>
+        <div class="cad-passo feito"><span class="cad-passo-num">&#10003;</span> Verificação</div>
+        <div class="cad-passo ativo"><span class="cad-passo-num">3</span> Perfil público</div>
+    </div>
+
+    <form asp-action="PerfilPublico" method="post" enctype="multipart/form-data">
+        <input type="hidden" asp-for="IdInstituicao" />
+        <input type="hidden" asp-for="Cidade" />
+        <input type="hidden" asp-for="Estado" />
+
+        <div class="cad-cartao">
+            <div>
+                <h2 class="cad-secao">Perfil público</h2>
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="cad-upload-grade">
+                    <div class="cad-upload">
+                        <div class="cad-upload-titulo">Adicionar logo</div>
+                        <label class="cad-upload-area">
+                            Formatos: PNG ou JPG. Tamanho máximo: 2 MB.
+                            <input type="file" name="logo" accept=".png,.jpg,.jpeg" />
+                        </label>
+                    </div>
+                    <div class="cad-upload">
+                        <div class="cad-upload-titulo">Fotos da instituição</div>
+                        <label class="cad-upload-area">
+                            Adicione fotos do espaço e do trabalho.
+                            <input type="file" name="fotos" accept=".png,.jpg,.jpeg" multiple />
+                        </label>
+                    </div>
+                </div>
+
+                <div class="cad-campo" style="margin-top:1rem">
+                    <label asp-for="NomeExibido"></label>
+                    <input asp-for="NomeExibido" class="form-control" />
+                    <span asp-validation-for="NomeExibido" class="text-danger"></span>
+                </div>
+
+                <div class="cad-campo">
+                    <label asp-for="Sobre"></label>
+                    <textarea asp-for="Sobre" class="form-control" rows="5" maxlength="500"></textarea>
+                    <div class="cad-contador">máximo de 500 caracteres</div>
+                    <span asp-validation-for="Sobre" class="text-danger"></span>
+                </div>
+
+                <label class="cad-declaracao">
+                    <input type="checkbox" asp-for="Visivel" />
+                    <span>Visível para doadores</span>
+                </label>
+            </div>
+
+            <aside>
+                <div class="cad-lateral-titulo">Como os doadores encontrarão sua instituição</div>
+                <div class="cad-previa">
+                    <div class="cad-previa-logo">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l9-6 9 6" /><path d="M5 10v8M9 10v8M15 10v8M19 10v8" /><path d="M3 21h18" /></svg>
+                    </div>
+                    <div>
+                        <div class="cad-previa-nome">@Model.NomeExibido</div>
+                        <div class="inst-secundario">@Model.Cidade, @Model.Estado</div>
+                        <div class="inst-secundario">A avaliação será exibida após as primeiras avaliações</div>
+                    </div>
+                </div>
+
+                <div class="cad-lateral">
+                    <div class="cad-lateral-item">
+                        <span class="cad-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10" /></svg></span>
+                        <span>Dados básicos</span>
+                    </div>
+                    <div class="cad-lateral-item">
+                        <span class="cad-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10" /></svg></span>
+                        <span>Verificação do responsável</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <div class="cad-etapa-botoes">
+            <a asp-action="Verificacao" asp-route-id="@Model.IdInstituicao" class="inst-btn inst-btn-contorno">Voltar</a>
+            <input type="submit" value="Enviar para análise" class="inst-btn inst-btn-primario" />
+        </div>
+    </form>
+
+    <p class="cad-rodape">Seu perfil ficará visível após a aprovação da verificação.</p>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
