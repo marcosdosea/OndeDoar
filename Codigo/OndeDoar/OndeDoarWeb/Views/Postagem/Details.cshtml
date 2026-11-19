@@ -1,42 +1,60 @@
 ﻿@model OndeDoarWeb.Models.PostagemViewModel
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalhes da Postagem";
 }
 
-<h1>Details</h1>
+@section Styles {
+    <link rel="stylesheet" href="~/css/postagem-details.css" asp-append-version="true" />
+}
 
-<div>
-    <h4>PostagemViewModel</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Titulo)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Titulo)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Descricao)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Descricao)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Data)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Data)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.InstituicaoId)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.InstituicaoId)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+<div class="detalhes-postagem-page">
+    <div class="postagem-container">
+        <a asp-action="Index" class="voltar-link">
+            <span>&larr;</span> Voltar para Postagens
+        </a>
+
+        <div class="detalhes-postagem-layout">
+            <!-- Coluna Principal: Conteúdo Completo da Postagem -->
+            <article class="detalhes-card-principal">
+                <div class="detalhes-meta">
+                    <span class="postagem-badge-instituicao">Instituição #@Model.InstituicaoId</span>
+                    <span>Publicado em @Model.Data.ToString("dd/MM/yyyy")</span>
+                </div>
+
+                <h1 class="detalhes-titulo">@Model.Titulo</h1>
+
+                <div class="detalhes-divisor"></div>
+
+                <div class="detalhes-corpo-texto">
+                    @Model.Descricao
+                </div>
+
+                <div class="detalhes-acoes">
+                    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn-editar">Editar Postagem</a>
+                    <a asp-action="Delete" asp-route-id="@Model.Id" class="btn-excluir-outline">Excluir</a>
+                </div>
+            </article>
+
+            <!-- Coluna Lateral: Informações da Instituição Responsável -->
+            <aside class="resumo-instituicao-card">
+                <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=800&q=80"
+                     alt="Instituição parceira"
+                     class="resumo-instituicao-foto" />
+                <div class="resumo-instituicao-corpo">
+                    <h3 class="resumo-instituicao-nome">Instituição #@Model.InstituicaoId</h3>
+                    <p class="resumo-instituicao-lema">
+                        Organização cadastrada na plataforma OndeDoar para recebimento de doações e apoio comunitário.
+                    </p>
+                    <p class="detalhes-info-extra">
+                        <strong>Código do Registro:</strong> #@Model.Id
+                    </p>
+                    <div class="selo-verificada">
+                        <span>Instituição Parceira</span>
+                        <span>&#10003; Verificada</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
 </div>

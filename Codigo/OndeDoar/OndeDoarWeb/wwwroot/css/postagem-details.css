@@ -1,0 +1,216 @@
+﻿:root {
+    --bg-page: #faf6f0;
+    --bg-card: #fbf9f5;
+    --bg-field: #f4efe6;
+    --text-primary: #143d30;
+    --text-body: #2c3531;
+    --text-muted: #6b726e;
+    --accent-coral: #f26b4c;
+    --accent-coral-hover: #df5839;
+    --accent-green: #164236;
+    --accent-green-hover: #0f2f26;
+    --border-soft: #e4ddd0;
+    --radius-lg: 16px;
+    --radius-md: 12px;
+    --radius-sm: 10px;
+}
+
+html, body {
+    background-color: var(--bg-page);
+    min-height: 100vh;
+}
+
+.detalhes-postagem-page {
+    background-color: var(--bg-page);
+    color: var(--text-body);
+    font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+    min-height: calc(100vh - 120px);
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 24px 0 52px;
+}
+
+.postagem-container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.voltar-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+    .voltar-link:hover {
+        color: var(--text-primary);
+    }
+
+.detalhes-postagem-layout {
+    display: grid;
+    grid-template-columns: 1.45fr 0.85fr;
+    gap: 32px;
+    align-items: start;
+}
+
+/* Card principal de leitura */
+.detalhes-card-principal {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-lg);
+    padding: 32px 34px;
+}
+
+.detalhes-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+}
+
+.postagem-badge-instituicao {
+    background-color: #ebe5d8;
+    color: var(--text-primary);
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 6px;
+}
+
+.detalhes-titulo {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 2.15rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.25;
+    margin: 0;
+}
+
+.detalhes-divisor {
+    height: 1px;
+    background-color: var(--border-soft);
+    margin: 22px 0;
+}
+
+.detalhes-corpo-texto {
+    font-size: 1.05rem;
+    color: var(--text-body);
+    line-height: 1.7;
+    white-space: pre-line;
+    margin-bottom: 32px;
+}
+
+/* Botões de ação */
+.detalhes-acoes {
+    display: flex;
+    gap: 14px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-soft);
+}
+
+.btn-editar {
+    flex: 1;
+    padding: 12px 20px;
+    border-radius: var(--radius-sm);
+    background-color: var(--accent-green);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.94rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+    .btn-editar:hover {
+        background-color: var(--accent-green-hover);
+        color: #ffffff;
+    }
+
+.btn-excluir-outline {
+    flex: 0.6;
+    padding: 12px 20px;
+    border-radius: var(--radius-sm);
+    border: 1.5px solid var(--accent-coral);
+    background-color: transparent;
+    color: var(--accent-coral);
+    font-weight: 600;
+    font-size: 0.94rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+    .btn-excluir-outline:hover {
+        background-color: var(--accent-coral);
+        color: #ffffff;
+    }
+
+/* Card lateral da instituição */
+.resumo-instituicao-card {
+    background-color: var(--bg-field);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.resumo-instituicao-foto {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+}
+
+.resumo-instituicao-corpo {
+    padding: 20px;
+}
+
+.resumo-instituicao-nome {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 6px;
+}
+
+.resumo-instituicao-lema {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border-soft);
+}
+
+.detalhes-info-extra {
+    font-size: 0.88rem;
+    color: var(--text-body);
+    margin: 0;
+}
+
+.selo-verificada {
+    margin-top: 14px;
+    background-color: #ebe5d8;
+    border-radius: var(--radius-sm);
+    padding: 10px 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width: 900px) {
+    .detalhes-postagem-layout {
+        grid-template-columns: 1fr;
+    }
+}

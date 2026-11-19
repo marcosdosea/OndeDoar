@@ -1,55 +1,106 @@
 ﻿@model OndeDoarWeb.Models.PostagemViewModel
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Nova Postagem";
 }
 
-<h1>Create</h1>
+@section Styles {
+    <link rel="stylesheet" href="~/css/postagem-create.css" asp-append-version="true" />
+}
 
-<h4>PostagemViewModel</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<div class="criar-postagem-page">
+    <div class="postagem-container">
+        <a asp-action="Index" class="voltar-link">
+            <span>&larr;</span> Voltar para Postagens
+        </a>
 
-            <div class="form-group">
-                <label asp-for="Titulo" class="control-label"></label>
-                <input asp-for="Titulo" class="form-control" />
-                <span asp-validation-for="Titulo" class="text-danger"></span>
+        <div class="criar-postagem-layout">
+            <!-- Coluna Principal: Formulário -->
+            <div>
+                <h1 class="postagem-titulo-principal">Criar Nova Postagem</h1>
+                <p class="postagem-subtitulo" style="margin-bottom: 24px;">
+                    Divulgue uma nova campanha de arrecadação, necessidade urgente ou novidade da instituição para os doadores.
+                </p>
+
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                    <div class="secao-form-card">
+                        <label asp-for="Titulo" class="secao-form-label">Título da Postagem</label>
+                        <input asp-for="Titulo" class="campo-controle" maxlength="50" placeholder="Ex: Campanha do Agasalho 2026" />
+                        <span asp-validation-for="Titulo" class="text-danger"></span>
+                    </div>
+
+                    <div class="secao-form-card">
+                        <label asp-for="Descricao" class="secao-form-label">Descrição</label>
+                        <textarea asp-for="Descricao" id="campoDescricao" class="campo-controle" maxlength="250" placeholder="Descreva os detalhes da campanha, itens necessários, horários ou locais de entrega..."></textarea>
+                        <div class="contador-caracteres">
+                            <span id="contadorAtual">0</span> / 250 caracteres
+                        </div>
+                        <span asp-validation-for="Descricao" class="text-danger"></span>
+                    </div>
+
+                    <div class="secao-form-card">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                            <div>
+                                <label asp-for="Data" class="secao-form-label">Data de Publicação</label>
+                                <input asp-for="Data" type="date" class="campo-controle" />
+                                <span asp-validation-for="Data" class="text-danger"></span>
+                            </div>
+
+                            <div>
+                                <label asp-for="InstituicaoId" class="secao-form-label">ID da Instituição</label>
+                                <input asp-for="InstituicaoId" type="number" class="campo-controle" placeholder="Ex: 1" />
+                                <span asp-validation-for="InstituicaoId" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="acoes-formulario">
+                        <button type="submit" class="btn-publicar">Publicar Postagem</button>
+                        <a asp-action="Index" class="btn-cancelar">Cancelar</a>
+                    </div>
+                </form>
             </div>
 
-            <div class="form-group">
-                <label asp-for="Descricao" class="control-label"></label>
-                <input asp-for="Descricao" class="form-control" />
-                <span asp-validation-for="Descricao" class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <label asp-for="Data" class="control-label"></label>
-                <input asp-for="Data" class="form-control" />
-                <span asp-validation-for="Data" class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <label asp-for="InstituicaoId" class="control-label"></label>
-                <input asp-for="InstituicaoId" class="form-control" />
-                <span asp-validation-for="InstituicaoId" class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+            <!-- Coluna Lateral: Card Informativo da Instituição -->
+            <aside class="resumo-instituicao-card">
+                <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=800&q=80"
+                     alt="Ação solidária"
+                     class="resumo-instituicao-foto" />
+                <div class="resumo-instituicao-corpo">
+                    <h3 class="resumo-instituicao-nome">Boas Práticas</h3>
+                    <p class="resumo-instituicao-lema">
+                        Postagens claras e objetivas aumentam o engajamento dos doadores locais.
+                    </p>
+                    <p style="font-size: 0.88rem; color: var(--text-body); line-height: 1.5; margin: 0;">
+                        <strong>Dica:</strong> Informe no texto quais itens têm maior urgência e o endereço ou ponto de coleta disponível.
+                    </p>
+                    <div class="selo-verificada">
+                        <span>Instituição Parceira</span>
+                        <span>&#10003; Verificada</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const textarea = document.getElementById("campoDescricao");
+            const contador = document.getElementById("contadorAtual");
+
+            if (textarea && contador) {
+                contador.textContent = textarea.value.length;
+                textarea.addEventListener("input", function () {
+                    contador.textContent = this.value.length;
+                });
+            }
+        });
+    </script>
 }
