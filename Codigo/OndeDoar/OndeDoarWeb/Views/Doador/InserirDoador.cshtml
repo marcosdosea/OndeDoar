@@ -16,7 +16,6 @@
 
 <div class="doador-page">
 
-    <!-- Cabeçalho -->
     <header class="doador-header">
 
         <a asp-action="Index" class="doador-logo">
@@ -34,12 +33,10 @@
 
     </header>
 
-    <!-- Conteúdo principal -->
     <main class="doador-main">
 
         <div class="doador-card">
 
-            <!-- Ícone de proteção -->
             <div class="doador-icon">
                 <i class="bi bi-shield-heart"></i>
             </div>
@@ -50,14 +47,12 @@
                 Mantenha seus dados atualizados.
             </p>
 
-            <!-- Formulário -->
             <form asp-action="InserirDoador" method="post">
 
                 <div asp-validation-summary="ModelOnly"
                      class="text-danger validation-summary">
                 </div>
 
-                <!-- Nome -->
                 <div class="doador-form-group">
 
                     <label asp-for="Nome">Nome completo</label>
@@ -76,7 +71,6 @@
 
                 </div>
 
-                <!-- E-mail -->
                 <div class="doador-form-group">
 
                     <label asp-for="Email">E-mail</label>
@@ -95,7 +89,6 @@
 
                 </div>
 
-                <!-- Telefone -->
                 <div class="doador-form-group">
 
                     <label asp-for="Telefone">Número de telefone</label>
@@ -114,12 +107,10 @@
 
                 </div>
 
-                <!-- Botão cadastrar -->
                 <button type="submit" class="btn-criar-conta">
                     Criar Conta
                 </button>
 
-                <!-- Botão cancelar -->
                 <a asp-action="Index" class="btn-cancelar">
                     Cancelar
                 </a>
