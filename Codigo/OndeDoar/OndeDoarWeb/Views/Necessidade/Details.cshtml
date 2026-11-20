@@ -1,24 +1,54 @@
 ﻿@model Models.NecessidadeViewModel
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalhes da necessidade";
 }
 
-<h1>Details</h1>
+@section Styles {
+    <link rel="stylesheet" href="~/css/necessidade-index.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/necessidade-detalhe.css" asp-append-version="true" />
+}
 
-<dl class="row">
-    <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Nome)</dt>
-    <dd class="col-sm-9">@Html.DisplayFor(m => m.Nome)</dd>
-    <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Categoria)</dt>
-    <dd class="col-sm-9">@Html.DisplayFor(m => m.Categoria)</dd>
-    <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Descricao)</dt>
-    <dd class="col-sm-9">@Html.DisplayFor(m => m.Descricao)</dd>
-    <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Prioridade)</dt>
-    <dd class="col-sm-9">@Html.DisplayFor(m => m.Prioridade)</dd>
-    <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Ativa)</dt>
-    <dd class="col-sm-9">@Html.DisplayFor(m => m.Ativa)</dd>
-</dl>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+<div class="necessidades-page">
+    <div class="necessidades-layout">
+        <partial name="_MenuInstituicao" model="@("Necessidades")" />
+
+        <main class="necessidades-main">
+            <header class="necessidades-cabecalho">
+                <div>
+                    <h1>Detalhes da necessidade</h1>
+                    <p>Veja como esta necessidade aparece para os doadores.</p>
+                </div>
+            </header>
+
+            <article class="detalhe-card">
+                <span class="card-icone" aria-hidden="true"><partial name="_IconeCategoria" model="@Model.Categoria" /></span>
+
+                <div class="detalhe-info">
+                    <h2>@Model.Nome</h2>
+                    <p class="card-categoria">@Model.Categoria</p>
+                    @if (!string.IsNullOrWhiteSpace(Model.Descricao))
+                    {
+                        <p class="detalhe-descricao">@Model.Descricao</p>
+                    }
+
+                    <dl class="detalhe-metas">
+                        <div>
+                            <dt>Prioridade</dt>
+                            <dd><partial name="_BadgePrioridade" model="@Model.Prioridade" /></dd>
+                        </div>
+                        <div>
+                            <dt>Status</dt>
+                            <dd><span class="badge-status @(Model.Ativa ? "status-ativa" : "status-inativa")">@(Model.Ativa ? "Ativa" : "Inativa")</span></dd>
+                        </div>
+                    </dl>
+                </div>
+            </article>
+
+            <div class="detalhe-acoes">
+                <a asp-action="Index" class="btn-contorno">Voltar</a>
+                <a asp-action="Edit" asp-route-id="@Model.Id" class="btn-coral">Editar necessidade</a>
+            </div>
+        </main>
+    </div>
 </div>

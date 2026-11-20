@@ -1,0 +1,106 @@
+﻿/* Delete e Details. Depende de necessidade-index.css (tokens, layout, menu, badges e botões). */
+html, body {
+    background-color: var(--bg-page);
+}
+
+/* ---------- Delete ---------- */
+.painel-confirmacao {
+    max-width: 560px;
+    margin: 0 auto;
+    text-align: center;
+    background: var(--bg-card);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+}
+
+    .painel-confirmacao .alerta {
+        width: 48px;
+        height: 48px;
+        color: var(--accent-coral);
+        stroke-width: 1.5;
+    }
+
+    .painel-confirmacao h1 {
+        font-size: 1.8rem;
+        margin: 8px 0;
+    }
+
+    .painel-confirmacao .btn-contorno {
+        display: inline-block;
+        text-decoration: none;
+        text-align: center;
+    }
+
+/* ---------- Details ---------- */
+.detalhe-card {
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    gap: 24px;
+    align-items: start;
+    background: var(--bg-card);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+}
+
+.detalhe-info h2 {
+    font-size: 1.8rem;
+    margin: 0 0 4px;
+}
+
+.detalhe-descricao {
+    margin: 0 0 20px;
+}
+
+.detalhe-metas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin: 0;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-soft);
+}
+
+    .detalhe-metas dt {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        font-weight: 400;
+        margin-bottom: 6px;
+    }
+
+    .detalhe-metas dd {
+        margin: 0;
+    }
+
+.detalhe-acoes {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+    .detalhe-acoes a {
+        display: inline-block;
+        text-decoration: none;
+        text-align: center;
+    }
+
+@media (max-width: 576px) {
+    .painel-confirmacao, .detalhe-card {
+        padding: 20px;
+    }
+
+    .detalhe-card {
+        grid-template-columns: 1fr;
+    }
+
+    .detalhe-acoes {
+        flex-direction: column-reverse;
+    }
+
+        .detalhe-acoes a {
+            width: 100%;
+        }
+}

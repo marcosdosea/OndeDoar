@@ -1,0 +1,39 @@
+﻿@* Menu lateral da área da instituição. Uso: <partial name="_MenuInstituicao" model="@("Necessidades")" /> *@
+@model string
+
+@{
+    string Atual(string item) => Model == item ? "page" : null!;
+}
+
+<aside class="menu-instituicao" aria-label="Menu da instituição">
+    <a class="menu-logo" href="/">OndeDoar</a>
+
+    <nav>
+        <ul class="menu-lista">
+            <li>
+                <a href="#" class="menu-link" aria-current="@Atual("Visão geral")">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z" /></svg>
+                    Visão geral
+                </a>
+            </li>
+            <li>
+                <a href="#" class="menu-link" aria-current="@Atual("Meu perfil")">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4" /><path d="M4 21a8 8 0 0 1 16 0z" /></svg>
+                    Meu perfil
+                </a>
+            </li>
+            <li>
+                <a asp-controller="Necessidade" asp-action="Index" class="menu-link" aria-current="@Atual("Necessidades")">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7z" /></svg>
+                    Necessidades
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    @* Nome fixo até existir autenticação; depois trocar pela instituição logada *@
+    <div class="menu-instituicao-card">
+        <strong>Lar Irmã Dulce</strong>
+        <p>Fazer o bem é cuidar de vidas.</p>
+    </div>
+</aside>

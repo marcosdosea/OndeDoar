@@ -1,0 +1,270 @@
+﻿/* Create e Edit. Depende de necessidade-index.css (tokens, layout, menu e botões). */
+html, body {
+    background-color: var(--bg-page);
+}
+
+.pill-visivel {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    align-self: flex-start;
+    background: var(--bg-soft);
+    color: var(--accent-green);
+    border-radius: 999px;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+}
+
+    .form-card svg, .pill-visivel svg, .btn-excluir svg {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+    }
+
+.form-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    display: grid;
+    gap: 24px;
+}
+
+.campo {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+}
+
+    .campo label, .campo legend {
+        display: block;
+        float: none;
+        width: auto;
+        font-size: 1rem;
+        margin: 0 0 8px;
+        font-family: "Georgia", "Times New Roman", serif;
+        font-weight: 700;
+        color: var(--text-primary);
+    }
+
+    .campo input[type="text"], .campo input:not([type]), .campo select, .campo textarea {
+        width: 100%;
+        padding: 12px 14px;
+        font: inherit;
+        color: var(--text-body);
+        background: var(--bg-card);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius-sm);
+    }
+
+    .campo textarea {
+        resize: vertical;
+        min-height: 110px;
+    }
+
+        .campo input:focus, .campo select:focus, .campo textarea:focus {
+            outline: 2px solid var(--accent-green);
+            outline-offset: 1px;
+        }
+
+.contador-caracteres {
+    text-align: right;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+.ajuda {
+    margin: 8px 0 0;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* Prioridade: radios como botões */
+.radio-oculto {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.radio-grupo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.radio-opcao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    margin: 0 !important;
+    font-family: inherit !important;
+    font-weight: 500 !important;
+    padding: 12px;
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-sm);
+    background: var(--bg-card);
+    color: var(--text-primary);
+}
+
+.campo .radio-alta {
+    color: var(--prio-alta);
+}
+
+.campo .radio-media {
+    color: var(--prio-media);
+}
+
+.campo .radio-baixa {
+    color: var(--prio-baixa);
+}
+
+.radio-oculto:checked + .radio-alta {
+    background: #fde8e6;
+    border-color: var(--prio-alta);
+    font-weight: 700 !important;
+}
+
+.radio-oculto:checked + .radio-media {
+    background: #fdf0dc;
+    border-color: var(--prio-media);
+    font-weight: 700 !important;
+}
+
+.radio-oculto:checked + .radio-baixa {
+    background: #e6efe3;
+    border-color: var(--prio-baixa);
+    font-weight: 700 !important;
+}
+
+.radio-oculto:focus-visible + .radio-opcao {
+    outline: 2px solid var(--accent-green);
+    outline-offset: 2px;
+}
+
+.linha-prio-status {
+    display: grid;
+    gap: 24px;
+}
+
+.aviso-visibilidade {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+    padding: 14px 16px;
+    border-radius: var(--radius-sm);
+    background: var(--bg-soft);
+    color: var(--text-primary);
+}
+
+/* Rodapé */
+.form-card .form-rodape {
+    border-top: 1px solid var(--border-soft);
+    padding-top: 20px;
+    margin-top: 4px;
+}
+
+.form-edicao > .form-rodape {
+    margin-top: 20px;
+}
+
+.form-criacao .form-rodape-acoes {
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 0;
+}
+
+.form-rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.form-rodape-acoes {
+    display: flex;
+    gap: 12px;
+    margin-left: auto;
+}
+
+.btn-contorno {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-excluir {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-family: "Georgia", serif;
+    font-weight: 700;
+    color: var(--prio-alta);
+    border: 1.5px solid var(--prio-alta);
+    padding: 12px 22px;
+    border-radius: var(--radius-md);
+}
+
+    .btn-excluir:hover {
+        background: #fde8e6;
+        color: var(--prio-alta);
+    }
+
+/* Edit: prioridade e status lado a lado */
+@media (min-width: 768px) {
+    .form-edicao .linha-prio-status {
+        grid-template-columns: 1.4fr 1fr;
+        align-items: start;
+    }
+
+        .form-edicao .linha-prio-status > .campo:last-child {
+            border-left: 1px solid var(--border-soft);
+            padding-left: 24px;
+        }
+}
+
+/* Edit: prioridade como controle segmentado */
+.form-edicao .radio-grupo {
+    gap: 0;
+}
+
+.form-edicao .radio-opcao {
+    border-radius: 0;
+    margin-left: -1px !important;
+}
+
+.form-edicao .radio-grupo .radio-opcao:first-of-type {
+    border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+    margin-left: 0 !important;
+}
+
+.form-edicao .radio-grupo .radio-opcao:last-of-type {
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+@media (max-width: 576px) {
+    .form-card {
+        padding: 20px;
+    }
+
+    .form-rodape-acoes {
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+
+        .form-rodape-acoes > * {
+            width: 100%;
+        }
+
+    .btn-excluir {
+        width: 100%;
+        text-align: center;
+    }
+}
