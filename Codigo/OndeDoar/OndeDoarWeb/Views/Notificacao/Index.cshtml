@@ -1,46 +1,87 @@
 ﻿@model IEnumerable<OndeDoarWeb.Models.NotificacaoViewModel>
 
 @{
-	ViewData["Title"] = "Index";
+	ViewData["Title"] = "Notificações";
+
+	var notificacoes = Model?.ToList() ?? new List<OndeDoarWeb.Models.NotificacaoViewModel>();
+	var total = notificacoes.Count;
 }
 
-<h1>Index</h1>
+@section Styles {
+	<link rel="stylesheet" href="~/css/notificacao-index.css" asp-append-version="true" />
+}
 
-<p>
-	<a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-	<thead>
-		<tr>
-			<th>
-				@Html.DisplayNameFor(model => model.Titulo)
-			</th>
-			<th>
-				@Html.DisplayNameFor(model => model.Descricao)
-			</th>
-			<th>
-				@Html.DisplayNameFor(model => model.IdInstituicao)
-			</th>
-			<th></th>
-		</tr>
-	</thead>
-	<tbody>
-		@foreach (var item in Model) {
-			<tr>
-				<td>
-					@Html.DisplayFor(modelItem => item.Titulo)
-				</td>
-				<td>
-					@Html.DisplayFor(modelItem => item.Descricao)
-				</td>
-				<td>
-					@Html.DisplayFor(modelItem => item.IdInstituicao)
-				</td>
-				<td>
-					<a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-					<a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-				</td>
-			</tr>
+<div class="notificacoes-page">
+	<div class="notificacao-container">
+		<header class="notificacoes-header">
+			<div>
+				<h1 class="notificacao-titulo-principal">Notificações</h1>
+				<p class="notificacao-subtitulo">Avise seus doadores sobre novidades, campanhas e necessidades da instituição.</p>
+			</div>
+			<a asp-action="Create" class="btn-nova-notificacao">Nova Notificação</a>
+		</header>
+
+		<div class="notificacoes-resumo">
+			<div class="resumo-icone" aria-hidden="true">
+				<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+					<path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
+					<path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+				</svg>
+			</div>
+			<div>
+				<div class="resumo-numero">@total</div>
+				<div class="resumo-rotulo">@(total == 1 ? "Notificação Cadastrada" : "Notificações Cadastradas")</div>
+			</div>
+		</div>
+
+		@if (!notificacoes.Any()) {
+			<div class="notificacoes-vazio">
+				<div class="resumo-icone" aria-hidden="true">
+					<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
+						<path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+					</svg>
+				</div>
+				<h2 class="notificacao-item-titulo">Nenhuma Notificação Cadastrada</h2>
+				<p class="notificacao-subtitulo">Crie uma notificação para os doadores.</p>
+				<a asp-action="Create" class="btn-nova-notificacao">Criar Notificação</a>
+			</div>
+		} else {
+			<div class="notificacoes-lista">
+				@foreach (var item in notificacoes) {
+					<article class="notificacao-item">
+						<div class="notificacao-icone" aria-hidden="true">
+							<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
+								<path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+							</svg>
+						</div>
+
+						<div class="notificacao-conteudo">
+							<h2 class="notificacao-item-titulo">@item.Titulo</h2>
+							<span class="notificacao-badge-instituicao">Instituição #@item.IdInstituicao</span>
+							<p class="notificacao-item-descricao">@item.Descricao</p>
+						</div>
+
+						<div class="notificacao-acoes">
+							<a asp-action="Details" asp-route-id="@item.Id" class="acao-icone" title="Ver Detalhes" aria-label="Ver Detalhes de @item.Titulo">
+								<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+									<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z" />
+									<circle cx="12" cy="12" r="3" />
+								</svg>
+							</a>
+							<a asp-action="Delete" asp-route-id="@item.Id" class="acao-icone acao-excluir" title="Excluir" aria-label="Excluir @item.Titulo">
+								<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+									<path d="M3 6h18" />
+									<path d="M8 6V4h8v2" />
+									<path d="M19 6l-1 14H6L5 6" />
+									<path d="M10 11v6M14 11v6" />
+								</svg>
+							</a>
+						</div>
+					</article>
+				}
+			</div>
 		}
-	</tbody>
-</table>
+	</div>
+</div>
