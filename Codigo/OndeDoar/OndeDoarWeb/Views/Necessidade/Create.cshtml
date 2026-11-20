@@ -1,48 +1,33 @@
 ﻿@model Models.NecessidadeViewModel
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Nova necessidade";
 }
 
-<h1>Create</h1>
+@section Styles {
+    <link rel="stylesheet" href="~/css/necessidade-index.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/necessidade-form.css" asp-append-version="true" />
+}
 
-<form asp-action="Create">
-    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-    <div class="mb-3">
-        <label asp-for="Nome" class="form-label"></label>
-        <input asp-for="Nome" class="form-control" />
-        <span asp-validation-for="Nome" class="text-danger"></span>
+<div class="necessidades-page">
+    <div class="necessidades-layout">
+        <partial name="_MenuInstituicao" model="@("Necessidades")" />
+
+        <main class="necessidades-main">
+            <header class="necessidades-cabecalho">
+                <div>
+                    <h1>Nova necessidade</h1>
+                    <p>Conte aos doadores o que sua instituição precisa neste momento.</p>
+                </div>
+                <span class="pill-visivel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z" /><circle cx="12" cy="12" r="3" /></svg>Visível para doadores</span>
+            </header>
+
+            <partial name="_FormNecessidade" model="Model" />
+        </main>
     </div>
-    <div class="mb-3">
-        <label asp-for="Categoria" class="form-label"></label>
-        <input asp-for="Categoria" class="form-control" />
-        <span asp-validation-for="Categoria" class="text-danger"></span>
-    </div>
-    <div class="mb-3">
-        <label asp-for="Descricao" class="form-label"></label>
-        <input asp-for="Descricao" class="form-control" />
-        <span asp-validation-for="Descricao" class="text-danger"></span>
-    </div>
-    <div class="mb-3">
-        <label asp-for="Prioridade" class="form-label"></label>
-        <select asp-for="Prioridade" class="form-select">
-            <option value="">Selecione...</option>
-            <option value="Alta">Alta</option>
-            <option value="Média">Média</option>
-            <option value="Baixa">Baixa</option>
-        </select>
-        <span asp-validation-for="Prioridade" class="text-danger"></span>
-    </div>
-    <div class="form-check mb-3">
-        <input asp-for="Ativa" class="form-check-input" />
-        <label asp-for="Ativa" class="form-check-label"></label>
-    </div>
-    <input type="submit" value="Salvar" class="btn btn-primary" />
-    <a asp-action="Index">Voltar</a>
-</form>
+</div>
 
 @section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
+    <partial name="_ValidationScriptsPartial" />
+    <script src="~/js/necessidade-form.js" asp-append-version="true"></script>
 }

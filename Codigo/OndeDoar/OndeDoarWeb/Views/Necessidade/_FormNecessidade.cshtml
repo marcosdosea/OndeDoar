@@ -1,0 +1,144 @@
+﻿@* Formulário compartilhado por Create e Edit. Edit define ViewData["Edicao"] = true. *@
+@model Models.NecessidadeViewModel
+
+@{
+    var edicao = ViewData["Edicao"] is true;
+
+    var categorias = new List<string> { "Roupas", "Alimentos", "Saúde", "Material escolar", "Outros" };
+    // Se a necessidade já tem uma categoria fora da lista (ex.: "Higiene"), ela continua selecionável
+    if (!string.IsNullOrEmpty(Model.Categoria) && !categorias.Contains(Model.Categoria))
+    {
+        categorias.Add(Model.Categoria);
+    }
+
+    // Prioridade padrão do protótipo: Média
+    if (string.IsNullOrEmpty(Model.Prioridade))
+    {
+        Model.Prioridade = "Média";
+    }
+
+    string ChavePrioridade(string p) => p switch { "Alta" => "alta", "Média" => "media", _ => "baixa" };
+
+    // Ícones das opções de prioridade (Create usa setas/check, Edit usa o estilo "radio" do protótipo)
+    string IconePrioridade(string p) => edicao
+        ? p switch
+        {
+            "Alta" => "<circle cx=\"12\" cy=\"12\" r=\"9\"/><circle cx=\"12\" cy=\"12\" r=\"3.5\" fill=\"currentColor\"/>",
+            "Média" => "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M8 12h8\"/>",
+            _ => "<circle cx=\"12\" cy=\"12\" r=\"9\"/><circle cx=\"12\" cy=\"12\" r=\"3.5\" fill=\"currentColor\"/>"
+        }
+        : p switch
+        {
+            "Alta" => "<path d=\"m7 13 5-5 5 5\"/><path d=\"m7 18 5-5 5 5\"/>",
+            "Média" => "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"m8.5 12 2.5 2.5 4.5-5\"/>",
+            _ => "<path d=\"m7 6 5 5 5-5\"/><path d=\"m7 11 5 5 5-5\"/>"
+        };
+
+    // Rodapé: dentro do card no Create e fora do card no Edit (como nos protótipos)
+    Func<dynamic, object> rodape = @<div class="form-rodape">
+        @if (edicao)
+        {
+            <a asp-action="Delete" asp-route-id="@Model.Id" class="btn-excluir">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18" /><path d="M8 6V4h8v2" /><path d="M6 6l1 14h10l1-14" /><path d="M10 11v6M14 11v6" /></svg>
+                Excluir necessidade
+            </a>
+        }
+        <div class="form-rodape-acoes">
+            <a asp-action="Index" class="btn-contorno">Cancelar</a>
+            <button type="submit" class="btn-coral">@(edicao ? "Salvar alterações" : "Cadastrar necessidade")</button>
+        </div>
+    </div>;
+}
+
+<form asp-action="@(edicao ? "Edit" : "Create")" method="post" class="@(edicao ? "form-edicao" : "form-criacao")">
+    <div class="form-card">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        @if (edicao)
+        {
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="IdInstituicao" />
+        }
+
+        <div class="campo">
+            <label asp-for="Nome">Nome da necessidade</label>
+            <input asp-for="Nome" maxlength="40" placeholder="Ex.: Fraldas infantis" autocomplete="off" />
+            <span asp-validation-for="Nome" class="text-danger"></span>
+        </div>
+
+        <div class="campo">
+            <label asp-for="Categoria">Categoria</label>
+            <select asp-for="Categoria">
+                @if (string.IsNullOrEmpty(Model.Categoria))
+                {
+                    <option value="">Selecione uma categoria</option>
+                }
+                @foreach (var c in categorias)
+                {
+                    <option value="@c">@c</option>
+                }
+            </select>
+            <span asp-validation-for="Categoria" class="text-danger"></span>
+        </div>
+
+        <div class="campo">
+            <label asp-for="Descricao">Descrição</label>
+            <textarea asp-for="Descricao" id="Descricao" rows="4" maxlength="100"
+                      placeholder="Descreva o que a instituição precisa..."></textarea>
+            <div class="contador-caracteres"><span id="contadorDescricao">0</span>/100</div>
+            <span asp-validation-for="Descricao" class="text-danger"></span>
+        </div>
+
+        <div class="linha-prio-status">
+            <fieldset class="campo">
+                <legend>Prioridade</legend>
+                <div class="radio-grupo">
+                    @foreach (var p in new[] { "Alta", "Média", "Baixa" })
+                    {
+                        var chave = ChavePrioridade(p);
+                        <input type="radio" asp-for="Prioridade" value="@p" id="prioridade-@chave" class="radio-oculto" />
+                        <label for="prioridade-@chave" class="radio-opcao radio-@chave">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">@Html.Raw(IconePrioridade(p))</svg>
+                            @p
+                        </label>
+                    }
+                </div>
+                <span asp-validation-for="Prioridade" class="text-danger"></span>
+                @if (!edicao)
+                {
+                    <p class="ajuda">A prioridade ajuda os doadores a entender quais necessidades são mais urgentes.</p>
+                }
+            </fieldset>
+
+            <div class="campo">
+                <label asp-for="Ativa">Status</label>
+                <select asp-for="Ativa">
+                    <option value="true">Ativa</option>
+                    <option value="false">Inativa</option>
+                </select>
+            </div>
+        </div>
+
+        <p class="aviso-visibilidade" role="note">
+            @if (edicao)
+            {
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 11v5M12 8h.01" /></svg>
+            }
+            else
+            {
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z" /><circle cx="12" cy="12" r="3" /></svg>
+            }
+            Esta necessidade ficará visível no perfil público da instituição enquanto estiver ativa.
+        </p>
+
+        @if (!edicao)
+        {
+            @rodape(null)
+        }
+    </div>
+
+    @if (edicao)
+    {
+        @rodape(null)
+    }
+</form>

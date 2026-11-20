@@ -1,0 +1,26 @@
+﻿@* Badge de prioridade. Uso: <partial name="_BadgePrioridade" model="@item.Prioridade" /> *@
+@model string
+
+@{
+    var chave = Model switch { "Alta" => "alta", "Média" => "media", _ => "baixa" };
+    var rotulo = Model switch { "Alta" => "Alta necessidade", "Média" => "Necessidade média", _ => "Necessidade baixa" };
+}
+
+<span class="badge-prioridade prio-@chave">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="9" />
+        @switch (chave)
+        {
+            case "alta":
+                <path d="M12 16V8M8.5 11.5 12 8l3.5 3.5" />
+                break;
+            case "media":
+                <path d="M8 12h8" />
+                break;
+            default:
+                <path d="M12 8v8M8.5 12.5 12 16l3.5-3.5" />
+                break;
+        }
+    </svg>
+    @rotulo
+</span>
